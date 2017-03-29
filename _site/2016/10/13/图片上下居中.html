@@ -1,4 +1,26 @@
-<p>今天遇到的问题就是需要把图片上下左右居中，其中左右居中比较简单，可以使用text-align:center;就能达到效果，重点在于高度居中。
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <title>图片上下居中</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="site">
+        <header>
+    <div class="header__content">
+        
+            <a class="header__link" href=""> Home</a>
+        
+            <a class="header__link" href=""> About</a>
+        
+    </div>
+</header>
+
+        <p>今天遇到的问题就是需要把图片上下左右居中，其中左右居中比较简单，可以使用text-align:center;就能达到效果，重点在于高度居中。
 在不知道图片高度的情况下，原先想使用css使得其上下居中，需要用到的是:</p>
 <blockquote>
   <p>display: table-cell;
@@ -41,3 +63,27 @@ vertical-align: middle</p>
 </blockquote>
 
 <p>在需要定位的图片加载完成之后，对图片进行遍历，获取图片的高度和所在容器的高度，将差值/2，再使用margin进行上下居中。</p>
+
+        
+        <footer>
+    
+        <a href="http://weibo.com/wmf755314203" target="_blank" class="footer_link">
+            <i class="iconfont icon_sina"></i>
+        </a>
+    
+        <a href="https://www.zhihu.com/people/MFWang_/activities" target="_blank" class="footer_link">
+            <i class="iconfont icon_zhihu"></i>
+        </a>
+    
+        <a href="http://www.jianshu.com/u/5ebd924cd5dc" target="_blank" class="footer_link">
+            <i class="iconfont icon_jianshu"></i>
+        </a>
+    
+        <a href="https://github.com/MfWang" target="_blank" class="footer_link">
+            <i class="iconfont icon_github"></i>
+        </a>
+    
+</footer>
+    </div>
+</body>
+</html>

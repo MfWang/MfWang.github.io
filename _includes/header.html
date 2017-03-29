@@ -1,6 +1,7 @@
 <header>
     <div class="header__content">
-        <a class="header__link" href="/">Home</a>
-        <a class="header__link" href="/">About</a>
+        {% for headermenu in site.header_menu %}
+            <a class="header__link" href="{{ personAccount.link }}"> {{ headermenu.name }}</a>
+        {% endfor %}
     </div>
 </header>

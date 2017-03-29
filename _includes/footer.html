@@ -1,10 +1,7 @@
 <footer>
-    <div class="links">
-        <a href=""><i class="iconfont icon_twitter"></i></a>
-        <a href=""><i class="iconfont icon_github"></i></a>
-        <a href=""><i class="iconfont icon_facebook"></i></a>
-        <a href=""><i class="iconfont icon_sina"></i></a>
-        <a href=""><i class="iconfont icon_wechat"></i></a>
-        <a href=""><i class="iconfont icon_qq"></i></a>
-    </div>
+    {% for personAccount in site.person_account %}
+        <a href="{{ personAccount.link }}" target="_blank" class="footer_link">
+            <i class="iconfont icon_{{ personAccount.type }}"></i>
+        </a>
+    {% endfor %}
 </footer>

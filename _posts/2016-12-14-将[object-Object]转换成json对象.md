@@ -1,3 +1,10 @@
+---
+layout: default
+title: 将[object-Object]转换成json对象
+tag: webpack react
+project: 前端开发
+---
+
 这两天在做中英文双版的文件，页面根据语言读取不同的内容。js模板用的是ejs
 >json文件： 
 `

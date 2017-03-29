@@ -24,7 +24,10 @@
 }
 .article__list .article__tag{
 }
-.article__list .article__category{
+.article__list .article__project{
+    border: 1px solid red;
+    padding: 0 10px;
+    color: red;
 }
 .article__tags span{
     font-size: 12px;

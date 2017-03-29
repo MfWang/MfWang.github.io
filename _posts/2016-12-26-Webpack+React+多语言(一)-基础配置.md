@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Webpack+React+多语言(一) 基础配置
+tag: webpack react
+project: 前端开发
 ---
 >已经看过这一节的朋友，可以看[Webpack+React+多语言(二) 插件配置+多语言](http://www.jianshu.com/p/dce81ab8940f)
 github地址：[webpack-react-language](https://github.com/AveSore/webpack-react-language)

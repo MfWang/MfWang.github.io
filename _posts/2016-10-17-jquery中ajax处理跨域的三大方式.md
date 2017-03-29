@@ -1,3 +1,9 @@
+---
+layout: default
+title: jquery中ajax处理跨域的三大方式
+tag: webpack react
+project: 前端开发
+---
 
 #****一、处理跨域的方式：****
 ****

@@ -6,24 +6,24 @@
 @import './index_person.css';
 @import './page.css';
 
-.top{
+.index_banner{
     width: 100%;
     height: 600px;
     background: #000 url(../img/index_bg.jpg) no-repeat center;
     background-size: cover;
     text-align: center;
 }
-.top h1{
+.index_banner_title{
     color: #fff;
     font-size: 80px;
     padding-top: 200px;
 }
-.top h3{
+.index_banner_desc{
     color: #fff;
     font-size: 20px;
     padding-top: 50px;
 }
-.main{
+.index_content{
     display: flex;
     justify-content: center;
 }

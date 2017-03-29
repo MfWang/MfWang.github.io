@@ -22,13 +22,57 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 
 # username
-twitter_username: twitter
-github_username:  github
-facebook_username: facebook
-sina_username:  sina
-wechat_username: wechat
-qq_username:  qq
-zhihu_username: zhihu
+#person account
+person_account: [
+  # twitter
+  #{
+    #"type": "twitter",
+    #"username": "twitter",
+    #"link": ""
+  #},
+  # facebook
+  #{
+    #"type": "facebook",
+    #"username": "facebook",
+    #"link": ""
+  #},
+  # sina
+  {
+    "type": "sina",
+    "username": "wmf755314203",
+    "link": "http://weibo.com/wmf755314203"
+  },
+  # wechat
+  #{
+    #"type": "wechat",
+   # "username": "wechat",
+    #"link": ""
+  #},
+  # qq
+  #{
+    #"type": "qq",
+    #"username": "qq",
+    #"link": ""
+  #},
+  # zhihu
+  {
+    "type": "zhihu",
+    "username": "MFWang_",
+    "link": "https://www.zhihu.com/people/MFWang_/activities"
+  },
+  # jianshu
+  {
+    "type": "jianshu",
+    "username": "抓住时间的尾巴",
+    "link": "http://www.jianshu.com/u/5ebd924cd5dc"
+  },
+  # github
+  {
+    "type": "github",
+    "username": "MfWang",
+    "link": "https://github.com/MfWang"
+  }
+]
 
 # Build settings
 markdown: kramdown
@@ -44,3 +88,40 @@ paginate_path: "page:num"
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Header menu
+header_menu: [
+  {
+    "name": "Home",
+    "link": ""
+  },
+  {
+    "name": "About",
+    "link": ""
+  },
+]
+
+# Index
+index_title: "MF、Wang's blog"
+index_desc: "写写代码，做做设计"
+index_desc2: "离开世界之前，一切都只是过程"
+
+# Post
+
+
+
+# Tags
+Tags: [
+  "react",
+  "html",
+  "css",
+  "javascript"
+]
+
+# Friends
+Friends: [
+  {
+    "name":"抓住时间的尾巴",
+    "link":""
+  }
+]

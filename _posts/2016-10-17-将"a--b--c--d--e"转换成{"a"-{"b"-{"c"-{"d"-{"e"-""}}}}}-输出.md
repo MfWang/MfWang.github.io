@@ -1,3 +1,10 @@
+---
+layout: default
+title: 将"a--b--c--d--e"转换成{"a"-{"b"-{"c"-{"d"-{"e"-""}}}}}-输出
+tag: webpack react
+project: 前端开发
+---
+
 >`<script>
     $(function(){
         var str="a->b->c->d->e"; 

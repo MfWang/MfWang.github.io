@@ -1,4 +1,26 @@
-<p><a href="http://www.cnblogs.com/sunxucool/p/3430914.html">jquery ajax 跨域</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <title>jquery ajax 跨域</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="site">
+        <header>
+    <div class="header__content">
+        
+            <a class="header__link" href=""> Home</a>
+        
+            <a class="header__link" href=""> About</a>
+        
+    </div>
+</header>
+
+        <p><a href="http://www.cnblogs.com/sunxucool/p/3430914.html">jquery ajax 跨域</a></p>
 
 <p>客户端“跨域访问”一直是一个头疼的问题，好在有jQuery帮忙，从jQuery-1.2以后跨域问题便迎刃而解。由于自己在项目中遇到跨域问题，借此机会对跨域问题来刨根问底，查阅了相关资料和自己的实践，算是解决了跨域问题。便记录下来，以供查阅。        
  jQuery.ajax()支持get方式的跨域，这其实是采用jsonp的方式来完成的。        
@@ -64,3 +86,27 @@ $.getJSON(" http://www.mysite.com/demo.do?name1="+value1+"&amp;callback=?", func
 
 <p> 这是因为虽然采用post +动态生成iframe是可以达到post跨域的目的(有位js牛人就是这样把jquery1.2.5 打patch的)，但这样做是一个比较极端的方式，不建议采用。也可以说get方式的跨域是合法的，post方式从安全角度上被认为是不合法的，万不得已 还是不要post，client端跨域访问的需求看来也引起w3c的注意了，看资料说html5 WebSocket标准支持跨域的数据交换，应该也是一个将来可选的跨域数据交换的解决方案。</p>
 
+
+        
+        <footer>
+    
+        <a href="http://weibo.com/wmf755314203" target="_blank" class="footer_link">
+            <i class="iconfont icon_sina"></i>
+        </a>
+    
+        <a href="https://www.zhihu.com/people/MFWang_/activities" target="_blank" class="footer_link">
+            <i class="iconfont icon_zhihu"></i>
+        </a>
+    
+        <a href="http://www.jianshu.com/u/5ebd924cd5dc" target="_blank" class="footer_link">
+            <i class="iconfont icon_jianshu"></i>
+        </a>
+    
+        <a href="https://github.com/MfWang" target="_blank" class="footer_link">
+            <i class="iconfont icon_github"></i>
+        </a>
+    
+</footer>
+    </div>
+</body>
+</html>

@@ -1,3 +1,10 @@
+---
+layout: default
+title: gitlab配置ssh-key
+tag: webpack react
+project: 前端开发
+---
+
 1.下载乌龟  
 2.乌龟生成和保存的是私钥，而现在这边需要用到公钥，可以在命令行下面拉取代码
 

@@ -20,6 +20,12 @@
 .icon_github:before{
     content: '\e735';
 }
+.icon_zhihu:before{
+    content: '\e62c';
+}
+.icon_jianshu:before{
+    content: '\e644';
+}
 .icon_facebook:before{
     content: '\e507';
 }
@@ -46,8 +52,11 @@
     content: '\e640';
 }
 .icon_arrowleft:before{
-    content: '\e83d';
+    content: '\e501';
 }
 .icon_arrowright:before{
-    content: '\e83e';
+    content: '\e614';
+}
+.icon_arrowtop:before{
+    content: '\e649';
 }

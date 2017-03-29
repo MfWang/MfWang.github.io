@@ -1,3 +1,10 @@
+---
+layout: default
+title: TortoiseGit使用初级教程
+tag: webpack react
+project: 前端开发
+---
+
 1、 安装TortoiseGit
 2、 添加账户凭证    [TortoiseGit之配置密钥](http://blog.csdn.net/bendanbaichi1989/article/details/17916795) 
 3、 任意文件夹下，右键选择git clone，复制仓库地址

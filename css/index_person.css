@@ -5,6 +5,7 @@
     width: 100%;
     font-weight: bold;
     font-size: 22px;
+    color: #000;
 }
 .person__tags{
     padding: 30px 0;
@@ -14,13 +15,46 @@
     flex-wrap: wrap;
     border-bottom: 1px solid #ededed;
 }
-.person__tags a{
+.person__tags .person__tags_link{
     display: block;
-    padding: 10px;
+    position: relative;
+	padding: 10px 9px 10px 14px;
+    margin: 10px;
+    color: rgba(0,0,0,0.36);
 }
+.person__tags_link::before,
+.person__tags_link::after  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 3px solid #ededed;
+	content: '';
+	transition: transform 0.3s, opacity 0.3s;
+}
+.person__tags_link::after  {
+	border-color: #354856;
+	opacity: 0;
+	transform: translateY(-7px) translateX(6px);
+}
+.person__tags_link:hover::before,
+.person__tags_link:focus::before {
+	opacity: 0;
+	transform: translateY(5px) translateX(-5px);
+}
+.person__tags_link:hover::after,
+.person__tags_link:focus::after  {
+	opacity: 1;
+	transform: translateY(0px) translateX(0px);
+}
+
+
+
 .person__about{
     padding: 30px 0;
     border-bottom: 1px solid #ededed;
+    color: rgba(0,0,0,0.36);
 }
 .person__about img{
     width: 200px;
@@ -29,6 +63,29 @@
     margin: 20px auto;
     border-radius: 100%;
 }
+.person__about p{
+    line-height: 35px;
+}
+.person__about .iconfont{
+    font-size: 32px;
+    color: rgba(0,0,0,0.36);
+}
+.person__about .links{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.person__about_link{
+    margin-right: 10px;
+}
+.person__about  .iconfont{
+    color: rgba(0,0,0,0.36);
+}
+.person__about  .iconfont:hover{
+    color: #189df7;
+}
+
 .person__friends{
     padding: 30px 0;
     display: flex;
@@ -36,9 +93,40 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.person__friends a{
+.person__friends .person__friends_link{
     display: block;
     width: 100%;
     line-height: 30px;
-    font-size: 18px;
+    font-size: 14px;
+    color: rgba(0,0,0,0.36);
+	transition: color 0.3s;
+	position: relative;
+}
+.person__friends_link:before,
+.person__friends_link:after {
+    position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #354856;
+	content: '';
+	opacity: 0;
+	transition: opacity 0.3s, transform 0.3s;
+	transform: translateY(-10px);
+}
+.person__friends_link::before {
+	top: 0;
+	transform: translateY(-10px);
+}
+.person__friends_link::after {
+	bottom: 0;
+	transform: translateY(10px);
+}
+.person__friends_link:hover {
+	color: #354856;
+}
+.person__friends_link:hover::before,
+.person__friends_link:hover::after{
+	opacity: 1;
+	transform: translateY(0px);
 }

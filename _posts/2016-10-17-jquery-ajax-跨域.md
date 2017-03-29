@@ -1,3 +1,10 @@
+---
+layout: default
+title: jquery ajax 跨域
+tag: webpack react
+project: 前端开发
+---
+
 [jquery ajax 跨域](http://www.cnblogs.com/sunxucool/p/3430914.html)
 
 客户端“跨域访问”一直是一个头疼的问题，好在有jQuery帮忙，从jQuery-1.2以后跨域问题便迎刃而解。由于自己在项目中遇到跨域问题，借此机会对跨域问题来刨根问底，查阅了相关资料和自己的实践，算是解决了跨域问题。便记录下来，以供查阅。        
