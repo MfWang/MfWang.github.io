@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Webpack+React+多语言(一) 基础配置
 tag: webpack react
 project: 前端开发

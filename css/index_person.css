@@ -93,6 +93,9 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.person__friends .title{
+    margin-bottom: 10px;
+}
 .person__friends .person__friends_link{
     display: block;
     width: 100%;
@@ -101,6 +104,7 @@
     color: rgba(0,0,0,0.36);
 	transition: color 0.3s;
 	position: relative;
+    margin: 5px 0;
 }
 .person__friends_link:before,
 .person__friends_link:after {

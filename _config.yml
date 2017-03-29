@@ -17,7 +17,7 @@ title: Your awesome title
 email: 755314203@qq.com
 description: > # this means to ignore newlines until "baseurl:"
   my blog with jekyll
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 
@@ -38,9 +38,9 @@ person_account: [
   #},
   # sina
   {
-    "type": "sina",
-    "username": "wmf755314203",
-    "link": "http://weibo.com/wmf755314203"
+    type: "sina",
+    username: "wmf755314203",
+    link: "http://weibo.com/wmf755314203"
   },
   # wechat
   #{
@@ -56,21 +56,21 @@ person_account: [
   #},
   # zhihu
   {
-    "type": "zhihu",
-    "username": "MFWang_",
-    "link": "https://www.zhihu.com/people/MFWang_/activities"
+    type: "zhihu",
+    username: "MFWang_",
+    link: "https://www.zhihu.com/people/MFWang_/activities"
   },
   # jianshu
   {
-    "type": "jianshu",
-    "username": "抓住时间的尾巴",
-    "link": "http://www.jianshu.com/u/5ebd924cd5dc"
+    type: "jianshu",
+    username: "抓住时间的尾巴",
+    link: "http://www.jianshu.com/u/5ebd924cd5dc"
   },
   # github
   {
-    "type": "github",
-    "username": "MfWang",
-    "link": "https://github.com/MfWang"
+    type: "github",
+    username: "MfWang",
+    link: "https://github.com/MfWang"
   }
 ]
 
@@ -92,12 +92,12 @@ exclude:
 # Header menu
 header_menu: [
   {
-    "name": "Home",
-    "link": ""
+    name: "Home",
+    link: ""
   },
   {
-    "name": "About",
-    "link": ""
+    name: "About",
+    link: ""
   },
 ]
 
@@ -121,7 +121,19 @@ Tags: [
 # Friends
 Friends: [
   {
-    "name":"抓住时间的尾巴",
-    "link":""
+    name: "抓住时间的尾巴",
+    link: "http://www.jianshu.com/u/5ebd924cd5dc"
+  },
+  {
+    name: "SnowRomance",
+    link: "http://www.jianshu.com/users/aba0e2c0fb39/timeline"
+  },
+  {
+    name: "北辰明",
+    link: "http://www.jianshu.com/u/5d1e6bd11aa0"
+  },
+  {
+    name: "quantre",
+    link: "http://www.jianshu.com/u/36b0a1cd2abe"
   }
 ]
