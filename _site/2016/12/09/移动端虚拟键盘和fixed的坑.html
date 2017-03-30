@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <title>移动端虚拟键盘和fixed的坑</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -22,12 +22,17 @@
     </div>
 </header>
 
-        <div class="index_banner">
-    <h1 class="index_banner_title">移动端虚拟键盘和fixed的坑</h1>
-    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+        <div class="post_banner">
+    <div class="post_tags">
+        
+            <span class="post_tag_item"> webpack react</span>
+        
+    </div>
+    <h1 class="post_banner_title">移动端虚拟键盘和fixed的坑</h1>
+    <h3 class="post_banner_time">Post By   [ 2016-12-09 00:00:00 +0800 ]</h3>
 </div>
-<div class="article_content">
-    <div class="article_detail">
+<div class="post_content">
+    <article>
         <p>这两天接手一个新需求，做一个直播间的页面，用于微信平台。</p>
 <h1 id="需求">需求</h1>
 <p>页面的设计稿要求 头部和底部置顶，底部有输入框，中间部分为显示内容的区域，可滚动</p>
@@ -63,10 +68,11 @@
 <p>###4.监听虚拟键盘
 虚拟键盘的弹起和关闭状态，可以用resize()来进行监听，当然，屏幕旋转的时候也会触发这个方法，此时就需要自己做判断控制。</p>
 
-    </div>
-    <div class="article_menu">
+    </article>
+    <sidebar>
         
-    </div>
+    </sidebar>
+     <i class="iconfont icon_arrowtop" onclick="javascript:scrollTo(0,0);"></i> 
 </div>
 
 

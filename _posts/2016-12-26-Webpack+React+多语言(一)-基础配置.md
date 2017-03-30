@@ -1,9 +1,12 @@
 ---
 layout: post
 title: Webpack+React+多语言(一) 基础配置
-tag: webpack react
+tags: 
+    - webpack 
+    - react
 project: 前端开发
 catalog: true
+author: Mf、Wang
 ---
 
 

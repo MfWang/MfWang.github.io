@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <title>移动端点击阴影去掉、新增点击(pressed)样式</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -22,12 +22,17 @@
     </div>
 </header>
 
-        <div class="index_banner">
-    <h1 class="index_banner_title">移动端点击阴影去掉、新增点击(pressed)样式</h1>
-    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+        <div class="post_banner">
+    <div class="post_tags">
+        
+            <span class="post_tag_item"> webpack react</span>
+        
+    </div>
+    <h1 class="post_banner_title">移动端点击阴影去掉、新增点击(pressed)样式</h1>
+    <h3 class="post_banner_time">Post By   [ 2016-12-09 00:00:00 +0800 ]</h3>
 </div>
-<div class="article_content">
-    <div class="article_detail">
+<div class="post_content">
+    <article>
         <p>移动端一些按钮、图片在点击的时候，背景会自带阴影，这个时候想要给他去掉，就需要在点击的内容上加上 -webkit-tap-highlight-color：</p>
 <blockquote>
   <p><code class="highlighter-rouge">/*关键代码*/
@@ -51,10 +56,11 @@ background-image: -webkit-image-set(url(./imgs/2X/gift_close_2x_pressed.png) 1x,
   <p>document.body.addEventListener(‘touchstart’, function () { });</p>
 </blockquote>
 
-    </div>
-    <div class="article_menu">
+    </article>
+    <sidebar>
         
-    </div>
+    </sidebar>
+     <i class="iconfont icon_arrowtop" onclick="javascript:scrollTo(0,0);"></i> 
 </div>
 
 

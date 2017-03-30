@@ -1,15 +1,20 @@
 ---
 layout: default
 ---
-<div class="index_banner">
-    <h1 class="index_banner_title">{{ page.title }}</h1>
-    <h3 class="index_banner_desc">{{ site.post_desc }}</h3>
-</div>
-<div class="article_content">
-    <div class="article_detail">
-        {{ content }}
+<div class="post_banner">
+    <div class="post_tags">
+        {% for tag in page.tags %}
+            <span class="post_tag_item"> {{ tag }}</span>
+        {% endfor %}
     </div>
-    <div class="article_menu">
+    <h1 class="post_banner_title">{{ page.title }}</h1>
+    <h3 class="post_banner_time">Post By {{ page.author }}  [ {{ page.date }} ]</h3>
+</div>
+<div class="post_content">
+    <article>
+        {{ content }}
+    </article>
+    <sidebar>
         {% if page.catalog %}
             <div class="
                 col-lg-2 col-lg-offset-0
@@ -25,6 +30,7 @@ layout: default
                 </div>
             </div>
         {% endif %}
-    </div>
+    </sidebar>
+     <i class="iconfont icon_arrowtop" onclick="javascript:scrollTo(0,0);"></i> 
 </div>
 

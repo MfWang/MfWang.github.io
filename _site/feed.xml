@@ -1,41 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-30T12:11:43+08:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>my blog with jekyll
-</subtitle><entry><title type="html"></title><link href="http://localhost:4000/2017/03/30/2016-10-17-AMD-CMD%E5%8C%BA%E5%88%AB.html" rel="alternate" type="text/html" title="" /><published>2017-03-30T12:11:43+08:00</published><updated>2017-03-30T12:11:43+08:00</updated><id>http://localhost:4000/2017/03/30/2016-10-17-AMD----CMD%E5%8C%BA%E5%88%AB</id><content type="html" xml:base="http://localhost:4000/2017/03/30/2016-10-17-AMD-CMD%E5%8C%BA%E5%88%AB.html">&lt;h1 id=&quot;区别&quot;&gt;区别：&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;对于依赖的模块，AMD 是&lt;strong&gt;提前执行&lt;/strong&gt;，CMD 是&lt;strong&gt;延迟执行&lt;/strong&gt;。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.&lt;/li&gt;
-  &lt;li&gt;CMD 推崇&lt;strong&gt;依赖就近&lt;/strong&gt;，AMD 推崇&lt;strong&gt;依赖前置&lt;/strong&gt;。看代码：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;// CMD&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define(function(require, exports, module) {
-	var a = require('./a')a.doSomething()// 此处略去 100 行
-	var b = require('./b') // 依赖可以就近书写
-	b.doSomething()// ...
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;// AMD 默认推荐的是&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define(['./a', './b'], function(a, b) { // 依赖必须一开始就写好
-	a.doSomething()// 此处略去 100 行
-	b.doSomething()
-	...
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;虽然 AMD 也支持 CMD 的写法，同时还支持将 require 作为依赖项传递，但 RequireJS 的作者默认是最喜欢上面的写法，也是官方文档里默认的模块定义写法。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;AMD 的 API 默认是&lt;strong&gt;一个当多个用&lt;/strong&gt;，CMD 的 API 严格区分，推崇&lt;strong&gt;职责单一&lt;/strong&gt;。比如 AMD 里，require 分全局 require 和局部 require，都叫 require。CMD 里，没有全局 require，而是根据模块系统的完备性，提供 seajs.use 来实现模块系统的加载启动。CMD 里，每个 API 都&lt;strong&gt;简单纯粹&lt;/strong&gt;。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;还有一些细节差异，具体看这个规范的定义就好，就不多说了。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author></entry><entry><title type="html">Webpack+React+多语言(一) 基础配置</title><link href="http://localhost:4000/2016/12/26/Webpack+React+%E5%A4%9A%E8%AF%AD%E8%A8%80(%E4%B8%80)-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="Webpack+React+多语言(一) 基础配置" /><published>2016-12-26T00:00:00+08:00</published><updated>2016-12-26T00:00:00+08:00</updated><id>http://localhost:4000/2016/12/26/Webpack+React+%E5%A4%9A%E8%AF%AD%E8%A8%80(%E4%B8%80)-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2016/12/26/Webpack+React+%E5%A4%9A%E8%AF%AD%E8%A8%80(%E4%B8%80)-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-30T14:44:15+08:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>my blog with jekyll
+</subtitle><entry><title type="html">Webpack+React+多语言(一) 基础配置</title><link href="http://localhost:4000/2016/12/26/Webpack+React+%E5%A4%9A%E8%AF%AD%E8%A8%80(%E4%B8%80)-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="Webpack+React+多语言(一) 基础配置" /><published>2016-12-26T00:00:00+08:00</published><updated>2016-12-26T00:00:00+08:00</updated><id>http://localhost:4000/2016/12/26/Webpack+React+%E5%A4%9A%E8%AF%AD%E8%A8%80(%E4%B8%80)-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2016/12/26/Webpack+React+%E5%A4%9A%E8%AF%AD%E8%A8%80(%E4%B8%80)-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE.html">&lt;blockquote&gt;
   &lt;p&gt;已经看过这一节的朋友，可以看&lt;a href=&quot;http://www.jianshu.com/p/dce81ab8940f&quot;&gt;Webpack+React+多语言(二) 插件配置+多语言&lt;/a&gt;&lt;/p&gt;
 
   &lt;p&gt;github地址：&lt;a href=&quot;https://github.com/AveSore/webpack-react-language&quot;&gt;webpack-react-language&lt;/a&gt;&lt;/p&gt;
@@ -426,7 +390,7 @@ module.exports = {
   &lt;p&gt;下一部分&lt;a href=&quot;http://www.jianshu.com/p/dce81ab8940f&quot;&gt;Webpack+React+多语言(二) 插件配置+多语言&lt;/a&gt;&lt;/p&gt;
 
   &lt;p&gt;github地址：&lt;a href=&quot;https://github.com/AveSore/webpack-react-language&quot;&gt;webpack-react-language&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="webpack react" /><summary type="html">已经看过这一节的朋友，可以看Webpack+React+多语言(二) 插件配置+多语言 github地址：webpack-react-language 关键字：react 多语言 国际版 React-intl</summary></entry><entry><title type="html">Grunt安装与环境配置</title><link href="http://localhost:4000/2016/12/22/Grunt%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="Grunt安装与环境配置" /><published>2016-12-22T00:00:00+08:00</published><updated>2016-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2016/12/22/Grunt%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2016/12/22/Grunt%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Grunt 依赖 Node.js 所以在安装之前确保你安装了 Node.js。然后开始安装 Grunt&lt;/code&gt;
+&lt;/blockquote&gt;</content><author><name>Mf、Wang</name></author><category term="webpack" /><category term="react" /><summary type="html">已经看过这一节的朋友，可以看Webpack+React+多语言(二) 插件配置+多语言 github地址：webpack-react-language 关键字：react 多语言 国际版 React-intl</summary></entry><entry><title type="html">Grunt安装与环境配置</title><link href="http://localhost:4000/2016/12/22/Grunt%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="Grunt安装与环境配置" /><published>2016-12-22T00:00:00+08:00</published><updated>2016-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2016/12/22/Grunt%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2016/12/22/Grunt%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Grunt 依赖 Node.js 所以在安装之前确保你安装了 Node.js。然后开始安装 Grunt&lt;/code&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;实际上，安装的并不是 Grunt，而是 Grunt-cli，也就是命令行的 Grunt，这样你就可以使用 grunt 命令来执行某个项目中的 Gruntfile.js 中定义的 task 。但是要注意，Grunt-cli 只是一个命令行工具，用来执行，而不是 Grunt 这个工具本身&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;项目的github地址：&lt;a href=&quot;https://github.com/AveSore/grunt_test&quot;&gt;grunt_test&lt;/a&gt;&lt;/p&gt;
@@ -1828,4 +1792,136 @@ background-image: -webkit-image-set(url(./imgs/2X/gift_close_2x_pressed.png) 1x,
 &lt;p&gt;移动端active状态下会有延迟，需要长按才会显示，这个时候，可以在js中加入&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;document.body.addEventListener(‘touchstart’, function () { });&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="webpack react" /><summary type="html">移动端一些按钮、图片在点击的时候，背景会自带阴影，这个时候想要给他去掉，就需要在点击的内容上加上 -webkit-tap-highlight-color： /*关键代码*/ -webkit-tap-highlight-color: transparent;</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name></name></author><category term="webpack react" /><summary type="html">移动端一些按钮、图片在点击的时候，背景会自带阴影，这个时候想要给他去掉，就需要在点击的内容上加上 -webkit-tap-highlight-color： /*关键代码*/ -webkit-tap-highlight-color: transparent;</summary></entry><entry><title type="html">锋利的jquery</title><link href="http://localhost:4000/2016/11/08/%E9%94%8B%E5%88%A9%E7%9A%84jQuery-%E8%AE%B0%E5%BD%95%E7%9A%84%E9%83%A8%E5%88%86%E7%AC%94%E8%AE%B0.html" rel="alternate" type="text/html" title="锋利的jquery" /><published>2016-11-08T00:00:00+08:00</published><updated>2016-11-08T00:00:00+08:00</updated><id>http://localhost:4000/2016/11/08/%E9%94%8B%E5%88%A9%E7%9A%84jQuery-%E8%AE%B0%E5%BD%95%E7%9A%84%E9%83%A8%E5%88%86%E7%AC%94%E8%AE%B0</id><content type="html" xml:base="http://localhost:4000/2016/11/08/%E9%94%8B%E5%88%A9%E7%9A%84jQuery-%E8%AE%B0%E5%BD%95%E7%9A%84%E9%83%A8%E5%88%86%E7%AC%94%E8%AE%B0.html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Window.onload&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;$(document).ready()&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;执行时机&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;必须等待网页中所有的内容（包括图片）加载完毕后才能执行&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;网页中所有DOM结构绘制完毕就执行，可能DOM元素关联的东西并没有加载完&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;编写个数&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;不能同时编写多个，&lt;br /&gt;以下代码无法正确执行：&lt;br /&gt;Window.onload =function(){&lt;br /&gt; alert(‘test1’);&lt;br /&gt;} &lt;br /&gt;Window.onload =function(){&lt;br /&gt; alert(‘test2’);&lt;br /&gt;}&lt;br /&gt;结果只会输出”test2”&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;能同时编写多个，&lt;br /&gt;以下代码正确执行：&lt;br /&gt;$(document).ready(){&lt;br /&gt; alert(‘hello world’);&lt;br /&gt;} &lt;br /&gt;$(document).ready(){&lt;br /&gt; alert(‘hello again’);&lt;br /&gt;} &lt;br /&gt;结果两次都输出&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;简化写法&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;无&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;$(document).ready(){}&lt;br /&gt;可以简化写成&lt;br /&gt;$(function(){})&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;###jquery链式操作代码块风格&lt;/p&gt;
+
+&lt;p&gt;子元素的操作推荐缩进&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$(this).addClass(‘highlight’)
+ .children(‘li’).show().end()
+.siblings().removeClass(‘highlight’)
+ .children(‘li’).hide()&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;###事件冒泡(阻止事件冒泡和自身的默认行为)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+$(element).bing('click', function(){
+    //点击事件的处理
+    event.stopPropagation(); //停止事件冒泡
+})&lt;/code&gt;
+ 页面某些元素有默认行为，比如submit的表单提交
+&lt;code class=&quot;highlighter-rouge&quot;&gt;event.preventDefault();//可以阻止元素的默认行为&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;###只能使用一次的点击事件，用one绑定&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$(element).one(‘click’, function(){})&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;###序列化元素&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;serialize()
+当表单中的内容比较多时，一个一个获取Input的内容显然是不合适的，此时就可以用到serialize()，例如
+$(‘#form’).serialize()
+$(“:checked,:radio”).serialize()只会将选中的值序列化
+$(‘#form’).serializeArray()不是返回字符串了，而是返回json&lt;/li&gt;
+    &lt;li&gt;$.param()方法
+var obj = {a:1,b:2,c:3}
+var k = $.param(obj)
+此时k输出为a=1&amp;amp;b=2&amp;amp;c=3&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$(element).ajaxStart({})//ajax开始之前，比如在页面部分地方显示加载中。。。&lt;/li&gt;
+    &lt;li&gt;$(element).ajaxStop({})&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;###JQuery validator&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;//自定义一个验证方法
+$.validator.addMethod(
+    &quot;functionName&quot;,
+    function(value,element,param){
+        return value == eval(param)
+    },
+    '错误提示信息'
+)
+&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;###闭包
+&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1874069-efc319091e0ec3ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;闭包1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1874069-cde631971f53c1c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;闭包2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;###常见的JQuery插件写法&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; 
+;(function($){
+      /*这里放置代码*/
+ })(jQuery);&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1874069-73d49e8583a9123d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;JQuery.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;###jQuery判断浏览器类型&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$(document).ready(){
+    //Firefox 2 and above
+    if ( $.browser.mozilla &amp;amp;&amp;amp; $.browser.version &amp;gt;= &quot;1.8&quot; ) {
+        //do something
+    }
+    //Safari
+    if ( $.browser.safari ) {
+        //do something
+    }
+    //Chrome
+    if ( $.browser.chrome ) {
+        //do something
+    }
+    //Opera
+    if ( $.browser.opera ) {
+        //do something
+    }
+    //IE6 and below
+    if ( $.browser.mise &amp;amp;&amp;amp;  $.browser.version &amp;lt;= &quot;6&quot; ) {
+        //do something
+    }
+    //anything above IE6
+    if ( $.browser.mise &amp;amp;&amp;amp;  $.browser.version &amp;gt; 6 ) {
+        //do something
+    }
+}
+&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="webpack react" /><summary type="html">  Window.onload $(document).ready() 执行时机 必须等待网页中所有的内容（包括图片）加载完毕后才能执行 网页中所有DOM结构绘制完毕就执行，可能DOM元素关联的东西并没有加载完 编写个数 不能同时编写多个，以下代码无法正确执行：Window.onload =function(){ alert(‘test1’);} Window.onload =function(){ alert(‘test2’);}结果只会输出”test2” 能同时编写多个，以下代码正确执行：$(document).ready(){ alert(‘hello world’);} $(document).ready(){ alert(‘hello again’);} 结果两次都输出 简化写法 无 $(document).ready(){}可以简化写成$(function(){})</summary></entry></feed>
