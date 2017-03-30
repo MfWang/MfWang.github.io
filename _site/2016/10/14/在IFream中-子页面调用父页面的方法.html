@@ -6,26 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <title>在IFream中，子页面调用父页面的方法</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="site">
         <header>
     <div class="header__content">
         
-            <a class="header__link" href=""> Home</a>
+            <a class="header__link" href="/"> Home</a>
         
-            <a class="header__link" href=""> About</a>
+            <a class="header__link" href="/about.html"> About</a>
+        
+            <a class="header__link" href="/project.html"> Project</a>
         
     </div>
 </header>
 
+        <div class="index_banner">
+    <h1 class="index_banner_title">在IFream中，子页面调用父页面的方法</h1>
+    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+</div>
+<div class="article_content">
+    <div class="article_detail">
         <p>工作中遇到的具体情况是，父页面中的菜单点击，在框架中打开子页面。子页面保存新增的数据后，打开父页面的另一个子页面，此时要调用父页面菜单点击事件。</p>
 
-<blockquote>
-  <p>var _parent = window.parent; //获得父页面的对象                          
-_parent.父页面中的方法                </p>
-</blockquote>
+<p><code class="highlighter-rouge">
+var _parent = window.parent; //获得父页面的对象                          
+_parent.父页面中的方法     
+</code>           </p>
+
+    </div>
+    <div class="article_menu">
+        
+    </div>
+</div>
+
 
         
         <footer>

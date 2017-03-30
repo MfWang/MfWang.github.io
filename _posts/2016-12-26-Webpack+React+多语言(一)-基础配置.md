@@ -3,16 +3,25 @@ layout: post
 title: Webpack+React+多语言(一) 基础配置
 tag: webpack react
 project: 前端开发
+catalog: true
 ---
->已经看过这一节的朋友，可以看[Webpack+React+多语言(二) 插件配置+多语言](http://www.jianshu.com/p/dce81ab8940f)
-github地址：[webpack-react-language](https://github.com/AveSore/webpack-react-language)
-关键字：react 多语言 国际版 React-intl
+
+
+
+> 已经看过这一节的朋友，可以看[Webpack+React+多语言(二) 插件配置+多语言](http://www.jianshu.com/p/dce81ab8940f)
+> 
+> github地址：[webpack-react-language](https://github.com/AveSore/webpack-react-language)
+> 
+> 关键字：react 多语言 国际版 React-intl
 
 移动端网站需要重构，当前的想法是使用webpack+react来重构移动端，当然，是需要支持多语言的。
 
-* #####1.创建一个项目：webpack-react-language
+### 1.创建一个项目：webpack-react-language
+
 这个项目名字有点长，我主要是为了与本地其他的项目区别开来
+
 目录结构
+
 ```
 |- build
     |-- index.html
@@ -24,18 +33,24 @@ github地址：[webpack-react-language](https://github.com/AveSore/webpack-react
 |- package.json(第二步生成)
 |- webpack.config.js(第四步生成)
 ```
-* #####2.创建package.json
+
+### 2.创建package.json
+
 ```
 npm init
 ```
-* #####3.安装webpack
+
+### 3.安装webpack
+
 ```
 //全局安装webpack，优点是打包时可以直接输webpack命令
 npm install -g webpack
 //在本项目中安装webpack，--save-dev的意思是将依赖写入项目的package.json文件
 npm install --save-dev webpack
 ```
-* #####4.创建webpack.config.js配置文件
+
+### 4.创建webpack.config.js配置文件
+
 ```
 module.exports = { 
     entry: __dirname + "/wap/main.js",//唯一入口文件，就像Java中的main方法 
@@ -45,12 +60,18 @@ module.exports = {
     }
 };
 ```
+
 运行`webpack`，webpack非全局安装需输入`node_modules/.bin/webpack`
+
 ![webpack打包成功.png](http://upload-images.jianshu.io/upload_images/1874069-c8032cf277d955ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 看到以上提示说明打包成功了，可以看到build目录下的bundle.js里多了很多自动生成的代码，但预览index.html却什么都没有看到，这是因为还没有往页面中写入内容。
-* #####5.更方便地执行打包命令
+
+### 5.更方便地执行打包命令
+
 执行类似于`node_modules/.bin/webpack`这样的命令其实是比较烦人且容易出错的，不过值得庆幸的是npm可以引导任务执行，对其进行配置后可以使用简单的npm start命令来代替这些繁琐的命令。在package.json中对npm的脚本部分进行相关设置即可，设置方法如下。
 打开package.json，找到script代码块，更改为：
+
 ```
 "scripts": { 
     "build": "webpack"
@@ -58,8 +79,10 @@ module.exports = {
     "start":"webpack"
 }
 ```
+
 但是start是一个特殊的脚本名称，如果脚本名称不是start，则需要`npm run (script name)`，如`npm run build`，但是start可以直接执行`npm start`
-* #####6.使用Source Maps，使调试更容易
+
+### 6.使用Source Maps，使调试更容易
 
 | devtool选项 | 配置结果 |
 | ------------- |-------------|
@@ -84,7 +107,8 @@ module.exports = {
 };
 ```
 
-* #####7.安装React、Babel
+### 7.安装React、Babel
+
 ```
 npm install react --save-dev
 npm install react-dom --save-dev
@@ -93,8 +117,11 @@ npm install babel-loader --save-dev
 npm install babel-preset-es2015 --save-dev
 npm install babel-preset-react --save-dev
 ```
+
 ![基本插件安装成功之后的package.json.png](http://upload-images.jianshu.io/upload_images/1874069-489388792f567e65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 在webpack.config.js中
+
 ```
 /webpack.config.js
 module.exports = { 
@@ -113,7 +140,9 @@ module.exports = {
     }
 };
 ```
+
 在项目根目录下新建.babelrc文件，没错你没看错，就是只有后缀名的文件，添加如下代码：
+
 ```
 //.babelrc
 { 
@@ -123,8 +152,11 @@ module.exports = {
     ]
 }
 ```
-* #####8.编写页面文件，为后续测试功能做准备
+
+### 8.编写页面文件，为后续测试功能做准备
+
 `wap/main.js`
+
 ```
 import React from 'react';
 import ReactDom from 'react-dom';
@@ -134,7 +166,9 @@ ReactDom.render(
     document.getElementById('content')
 );
 ```
+
 `wap/components/dialog.js`
+
 ```
 import React from 'react';
 class Dialog extends React.Component {    
@@ -147,7 +181,9 @@ class Dialog extends React.Component {
 //导出组件
 export default Dialog;
 ```
+
 `build/index.html`
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -161,26 +197,33 @@ export default Dialog;
 </body>
 </html>
 ```
+
 我使用的编辑器是webstorm，上述步骤完成之后，执行`npm start`，打包成功后，运行index.html，可以看到页面上
-![成功运行.png](http://upload-images.jianshu.io/upload_images/1874069-eaa2c46bc0dcb668.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-* #####9.安装并启用webpack-dev-server
+
+![成功运行](http://upload-images.jianshu.io/upload_images/1874069-eaa2c46bc0dcb668.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 9.安装并启用webpack-dev-server
 
 执行到这一步，基本的运作是可以了，但是每次修改文件之后，都需要重新打包，再运行，才可以看到新的内容，如何能忍受这么low的执行过程呢？
 
 我们可以使用webpack-dev-server来搭建本地开发服务器，webpack-dev-server允许我们可以把本地项目跑在像nginx那样的web服务器上，修改代码后，立即可以看到变化；所见即所得，大大增加开发效率。
 
 安装webpack-dev-server
+
 ```
 npm install webpack-dev-server -g
 npm install webpack-dev-server --save-dev
 ```
+
 更改packaje.json中的代码块
+
 ```
 "scripts": { 
     "start": "webpack", 
     "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
 }
 ```
+
 ps：dev里各属性值的意思是：
 >* webpack-dev-server: 在 localhost:8080 建立一个 Web 服务器
 >*  --devtool eval:为你的代码创建源地址。当有任何报错的时候可以让你更加精确地定位到文件和行号
@@ -189,6 +232,7 @@ ps：dev里各属性值的意思是：
 >* --content-base build:指向设置的输出目录
 
 在webpack.config.js中配置webpack-dev-server，在这里需要修改下entry的路径，给它加一个webpack/hot/dev-server，这里会用到Hot Module Replacement（热替换）插件，所以需要增加这个前缀，后文会提到，代码如下：
+
 ```
 //webpack.config.js
 module.exports = { 
@@ -216,9 +260,16 @@ module.exports = {
     }
 };
 ```
-在浏览器中打开`http://localhost:8080/`，如果页面上是空白的，没有内容，按F12打开控制台，可以清除地看到错误提示：`Uncaught Error: [HMR] Hot Module Replacement is disabled`
+
+在浏览器中打开`http://localhost:8080/`，如果页面上是空白的，没有内容，按F12打开控制台，可以清除地看到错误提示：
+
+```
+Uncaught Error: [HMR] Hot Module Replacement is disabled
+```
+
 现在我们来安装和配置这个Hot Module Replacement。
-* #####10.Hot Module Replacement
+
+### 10.Hot Module Replacement
 
 Hot Module Replacement（HMR）是webpack里很有用的一个插件，它允许你在修改组件代码后，自动刷新实时预览修改后的效果。
 在webpack中实现HMR也很简单，只需要做两项配置
@@ -234,6 +285,7 @@ Hot Module Replacement（HMR）是webpack里很有用的一个插件，它允许
 * Babel有一个叫做react-transform-hrm的插件，可以在不对React模块进行额外的配置的前提下让HMR正常工作；
 
 在webpack.config.js中配置如下：
+
 ```
 //webpack.config.js
 var webpack = require('webpack')
@@ -265,14 +317,19 @@ module.exports = {
     }
 };
 ```
+
 现在可以正常工作了，运行`npm run dev`，待命令行提示`webpack: bundle is now VALID`后，在浏览器中输入`http://localhost:8080`，可以看到，正常显示Hello World
+
 如果觉得这样不放心，让我们进行如下额外配置
 
 安装react-transform-hmr，在不对React模块进行额外的配置的前提下让HMR正常工作
+
 ```
 npm install --save-dev babel-plugin-react-transform react-transform-hmr
 ```
+
 在.babelrc文件里配置babel，注意这里有一堆括号，别写错了
+
 ```
 //.babelrc
 { 
@@ -297,7 +354,11 @@ npm install --save-dev babel-plugin-react-transform react-transform-hmr
     }
 }
 ```
+
 至此，已经用webpack构建好了React项目的基础依赖，可以愉快的开发React程序了。
 
->由于内容太多，于是将本文分成了多个部分，下一部分[Webpack+React+多语言(二) 插件配置+多语言](http://www.jianshu.com/p/dce81ab8940f)
-github地址：[webpack-react-language](https://github.com/AveSore/webpack-react-language)
+> 由于内容太多，于是将本文分成了多个部分
+> 
+> 下一部分[Webpack+React+多语言(二) 插件配置+多语言](http://www.jianshu.com/p/dce81ab8940f)
+> 
+> github地址：[webpack-react-language](https://github.com/AveSore/webpack-react-language)

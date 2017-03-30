@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: phpstorm-watcher
 tag: webpack react
 project: 前端开发

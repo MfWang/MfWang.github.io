@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 将[object-Object]转换成json对象
 tag: webpack react
 project: 前端开发

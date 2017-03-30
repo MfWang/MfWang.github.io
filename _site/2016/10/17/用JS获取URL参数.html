@@ -6,52 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <title>用JS获取URL参数</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="site">
         <header>
     <div class="header__content">
         
-            <a class="header__link" href=""> Home</a>
+            <a class="header__link" href="/"> Home</a>
         
-            <a class="header__link" href=""> About</a>
+            <a class="header__link" href="/about.html"> About</a>
+        
+            <a class="header__link" href="/project.html"> Project</a>
         
     </div>
 </header>
 
-        <blockquote>
-  <p><code class="highlighter-rouge">//返回的是字符串形式的参数，例如：class_id=3&amp;id=2&amp; 
-    function getUrlArgStr(){ 
-        var q=location.search.substr(1); 
-        var qs=q.split('&amp;'); 
-        var argStr=''; 
-        if(qs){ 
-            for(var i=0;i&lt;qs.length;i++){ 
-          argStr+=qs[i].substring(0,qs[i].indexOf('='))+'='+qs[i].substring(qs[i].indexOf('=')+1)+'&amp;'; 
-            } 
+        <div class="index_banner">
+    <h1 class="index_banner_title">用JS获取URL参数</h1>
+    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+</div>
+<div class="article_content">
+    <div class="article_detail">
+        <div class="highlighter-rouge"><pre class="highlight"><code>//返回的是字符串形式的参数，例如：class_id=3&amp;id=2&amp; 
+function getUrlArgStr(){ 
+    var q=location.search.substr(1); 
+    var qs=q.split('&amp;'); 
+    var argStr=''; 
+    if(qs){ 
+        for(var i=0;i&lt;qs.length;i++){ 
+      argStr+=qs[i].substring(0,qs[i].indexOf('='))+'='+qs[i].substring(qs[i].indexOf('=')+1)+'&amp;'; 
         } 
-        console.log(argStr);
-        //return argStr; 
     } 
-    //返回的是对象形式的参数 
-    function getUrlArgObject(){ 
-        var args=new Object(); 
-        var query=location.search.substring(1);//获取查询串 
-        var pairs=query.split(",");//在逗号处断开 
-        for(var i=0;i&lt;pairs.length;i++){ 
-            var pos=pairs[i].indexOf('=');//查找name=value 
-            if(pos==-1){//如果没有找到就跳过 
-                continue; 
-            } 
-            var argname=pairs[i].substring(0,pos);//提取name 
-            var value=pairs[i].substring(pos+1);//提取value 
-            args[argname]=unescape(value);//存为属性 
+    console.log(argStr);
+    //return argStr; 
+} 
+//返回的是对象形式的参数 
+function getUrlArgObject(){ 
+    var args=new Object(); 
+    var query=location.search.substring(1);//获取查询串 
+    var pairs=query.split(",");//在逗号处断开 
+    for(var i=0;i&lt;pairs.length;i++){ 
+        var pos=pairs[i].indexOf('=');//查找name=value 
+        if(pos==-1){//如果没有找到就跳过 
+            continue; 
         } 
-        console.log(args);
-        //return args; 
-    }</code></p>
-</blockquote>
+        var argname=pairs[i].substring(0,pos);//提取name 
+        var value=pairs[i].substring(pos+1);//提取value 
+        args[argname]=unescape(value);//存为属性 
+    } 
+    console.log(args);
+    //return args; 
+}
+</code></pre>
+</div>
+
+    </div>
+    <div class="article_menu">
+        
+    </div>
+</div>
+
 
         
         <footer>

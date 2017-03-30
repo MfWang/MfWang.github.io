@@ -6,83 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <title>jquery中ajax处理跨域的三大方式</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="site">
         <header>
     <div class="header__content">
         
-            <a class="header__link" href=""> Home</a>
+            <a class="header__link" href="/"> Home</a>
         
-            <a class="header__link" href=""> About</a>
+            <a class="header__link" href="/about.html"> About</a>
+        
+            <a class="header__link" href="/project.html"> Project</a>
         
     </div>
 </header>
 
-        <p>#<strong>**一、处理跨域的方式：</strong>**
-<strong>**
-###</strong>1.代理**</p>
+        <div class="index_banner">
+    <h1 class="index_banner_title">jquery中ajax处理跨域的三大方式</h1>
+    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+</div>
+<div class="article_content">
+    <div class="article_detail">
+        <p>#一、处理跨域的方式:</p>
+
+<p>###<strong>1.代理</strong></p>
 
 <p>###<strong>2.XHR2</strong>
 HTML5中提供的XMLHTTPREQUEST Level2（及XHR2）已经实现了跨域访问。但ie10以下不支持。只需要在服务端填上响应头：</p>
-<blockquote>
-  <p><code class="highlighter-rouge">
-header("Access-Control-Allow-Origin:*");
+
+<div class="highlighter-rouge"><pre class="highlight"><code>header("Access-Control-Allow-Origin:*");
 /*星号表示所有的域都可以接受，*/
-header("Access-Control-Allow-Methods:GET,POST");</code></p>
+header("Access-Control-Allow-Methods:GET,POST");
+</code></pre>
+</div>
+
+<p>###<strong>3.jsonp</strong></p>
+
+<p>原理：</p>
+
+<p>ajax本身是不可以跨域的，通过产生一个script标签来实现跨域。因为script标签的src属性是没有跨域的限制的。</p>
+
+<p>其实设置了dataType: ‘jsonp’后，</p>
+
+<blockquote>
+  <p>$.ajax方法就和ajax XmlHttpRequest没什么关系了，取而代之的则是JSONP协议。JSONP是一个非官方的协议，它允许在服务器端集成Script tags返回至客户端，通过javascript callback的形式实现跨域访问。
+ ajax的跨域写法：（其余写法和不跨域的一样）：//当前网址是localhost:3000</p>
 </blockquote>
 
-<p>###<strong>3.jsonp</strong>
-原理：
- ajax本身是不可以跨域的，通过产生一个script标签来实现跨域。因为script标签的src属性是没有跨域的限制的。
-其实设置了dataType: ‘jsonp’后，$.ajax方法就和ajax XmlHttpRequest没什么关系了，取而代之的则是JSONP协议。JSONP是一个非官方的协议，它允许在服务器端集成Script tags返回至客户端，通过javascript callback的形式实现跨域访问。
- ajax的跨域写法：
-（其余写法和不跨域的一样）：
-/<em>当前网址是localhost:3000</em>/
-js代码</p>
-<blockquote>
-  <p><code class="highlighter-rouge">
-$.ajax({ 
+<p>js代码</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$.ajax({ 
     type:"get", 
-    url:"http://localhost:3000/showAll",/*url写异域的请求地址*/ 
+    url:"http://localhost:3000/showAll", //url写异域的请求地址
     dataType:"jsonp",/*加上datatype*/ 
     jsonpCallback:"cb",/*设置一个回调函数，名字随便取，和下面的函数里的名字相同就行*/
      success:function(){ 
         //... 
     }
-});</code>
- 
-/<em>而在异域服务器上，</em>/
+});
+/*而在异域服务器上，*/
 app.js
-`
-app.get(‘/showAll’,students.showAll);/<em>这和不跨域的写法相同</em>/
-/<em>在异域服务器的showAll函数里，</em>/
-var db = require(“./database”);
+
+app.get('/showAll',students.showAll);/*这和不跨域的写法相同*/
+/*在异域服务器的showAll函数里，*/
+var db = require("./database");
 exports.showAll =function(req,res){
-    /<strong>设置响应头允许ajax跨域访问</strong>/
-   res.setHeader(“Access-Control-Allow-Origin”,”<em>”);
-   /</em>星号表示所有的异域请求都可以接受，<em>/
-   res.setHeader(“Access-Control-Allow-Methods”,”GET,POST”);
+    /**设置响应头允许ajax跨域访问**/
+   res.setHeader("Access-Control-Allow-Origin","*");
+   /*星号表示所有的异域请求都可以接受，*/
+   res.setHeader("Access-Control-Allow-Methods","GET,POST");
    var con = db.getCon();
-   con.query(“select * from t_students”,function(error,rows){ 
+   con.query("select * from t_students",function(error,rows){ 
       if(error){  
-         console.log(“数据库出错：”+error); 
+         console.log("数据库出错："+error); 
       }else{  
-         /</em>注意这里，返回的就是jsonP的回调函数名+数据了*/  
-         res.send(“cb(“+JSON.stringify(r)+”)”
+         /*注意这里，返回的就是jsonP的回调函数名+数据了*/  
+         res.send("cb("+JSON.stringify(r)+")"
       );
    }
-}`</p>
-</blockquote>
+}
+</code></pre>
+</div>
 
-<p>#<strong>二、解决ajax跨域访问、 JQuery 的跨域方法</strong>
-JS的跨域问题，我想很多程序员的脑海里面还认为JS是不能跨域的，其实这是一个错误的观点；有很多人在网上找其解决方法，教其用IFRAME去解决的文章很多，真有那么复杂吗？其实很简单的，如果你用JQUERY，一个GETJSON方法就搞定了，而且是一行代码搞定。</p>
+<p>#<strong>二、解决ajax跨域访问、 JQuery 的跨域方法</strong></p>
+
+<p>JS的跨域问题，我想很多程序员的脑海里面还认为JS是不能跨域的，其实这是一个错误的观点；有很多人在网上找其解决方法，教其用IFRAME去解决的文章很多，真有那么复杂吗？其实很简单的，如果你用JQUERY，一个GETJSON方法就搞定了，而且是一行代码搞定。</p>
 
 <p>下面开始贴出方法。</p>
-<blockquote>
-  <p><code class="highlighter-rouge">
-//跨域（可跨所有域名）
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//跨域（可跨所有域名）
 $.getJSON("http://user.hnce.com.cn/getregion.aspx?id=0&amp;jsoncallback=?",function(json){ 
     //要求远程请求页面的数据格式为： ?(json_data) 
     //例如： 
@@ -92,8 +105,9 @@ $.getJSON("http://user.hnce.com.cn/getregion.aspx?id=0&amp;jsoncallback=?",funct
     //要求远程请求页面的数据格式为： ?(json_data) 
     //例如： 
     //?([{"_name":"湖南省","_regionId":134},{"_name":"北京市","_regionId":143}]) alert(json[0]._name);
-});</code></p>
-</blockquote>
+});
+</code></pre>
+</div>
 
 <p>注意，getregion.aspx中，在输出JSON数据时，一定要用
 Request.QueryString[“jsoncallback”]，将获取的内容放到返回JSON数据的前面。假设实际获取的值为42342348，那么返回的值就是 42342348([{“_name”:”湖南省”,”_regionId”:134},{“_name”:”北京市”,”_regionId”:143}])</p>
@@ -101,51 +115,54 @@ Request.QueryString[“jsoncallback”]，将获取的内容放到返回JSON数�
 <p>因为getJSON跨域的原理是把？随机变一个方法名，然后返回执行的，实现跨域响应的目的。</p>
 
 <p>下面一个是跨域执行的真实例子：</p>
-<blockquote>
-  <p><code class="highlighter-rouge">&lt;script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt; 
+
+<p>```<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>
+<script type="text/javascript"> 
     //跨域（可跨所有域名） 
     $.getJSON("http://e.hnce.com.cn/tools/ajax.aspx?jsoncallback=?", { id: 0, action: 'jobcategoryjson' }, function(json) { 
     alert(json[0].pid); 
     alert(json[0].items[0]._name); 
 });
-&lt;/script&gt;
-****
-&lt;script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt; 
+</script>
+<em>**</em>
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>
+<script type="text/javascript"> 
     //跨域（可跨所有域名） 
     $.getJSON("http://e.hnce.com.cn/tools/ajax.aspx?jsoncallback=?", { id: 0, action: 'jobcategoryjson' }, function(json) { 
     alert(json[0].pid); 
     alert(json[0].items[0]._name); 
 });
-&lt;/script&gt;</code></p>
-</blockquote>
+</script></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+**jQuery跨域原理:**
 
-<p><strong>jQuery跨域原理:</strong>
-浏览器会进行同源检查,这导致了跨域问题,然而这个跨域检查还有一个例外那就是HTML的<script>标记;我们经常使用<script>的src属性,脚本静态资源放在独立域名下或者来自其它站点的时候这里是一个url;这个url响应的结果可以有很多种,比如JSON,返回的Json值成为<script>标签的src属性值.这种属性值变化并不会引起页面的影响.按照惯例，浏览器在URL的查询字符串中提供一个参数，这个参数将作为结果的前缀一起返回到浏览器;
-看下面的例子：</script></script></script></p>
-<blockquote>
-  <script type="text/javascript" src="http://domain2.com/getjson?jsonp=parseResponse"> </script>
+浏览器会进行同源检查,这导致了跨域问题,然而这个跨域检查还有一个例外那就是HTML的&lt;Script&gt;标记;我们经常使用&lt;Script&gt;的src属性,脚本静态资源放在独立域名下或者来自其它站点的时候这里是一个url;这个url响应的结果可以有很多种,比如JSON,返回的Json值成为&lt;Script&gt;标签的src属性值.这种属性值变化并不会引起页面的影响.按照惯例，浏览器在URL的查询字符串中提供一个参数，这个参数将作为结果的前缀一起返回到浏览器;
 
-  <p>响应值：parseResponse({“Name”: “Cheeso”, “Rank”: 7})
+看下面的例子：
+
+</code></pre>
+</div>
+<script type="text/javascript" src="http://domain2.com/getjson?jsonp=parseResponse"> </script>
+
+<p>响应值：parseResponse({“Name”: “Cheeso”, “Rank”: 7})
 <script type="text/javascript" src="http://domain2.com/getjson?jsonp=parseResponse"> </script>
 响应值：parseResponse({“Name”: “Cheeso”, “Rank”: 7})</p>
-</blockquote>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+这种方式被称作JsonP;(如果链接已经失效请点击这里:JSONP);即：JSON with padding 上面提到的前缀就是所谓的“padding”。那么jQuery里面是怎么实现的呢？
 
-<p>这种方式被称作JsonP;(如果链接已经失效请点击这里:JSONP);即：JSON with padding 上面提到的前缀就是所谓的“padding”。那么jQuery里面是怎么实现的呢？
-貌似并没有<script>标记的出现！？OKay，翻看源码来看：
+貌似并没有&lt;Script&gt;标记的出现！？OKay，翻看源码来看：
+
 页面调用的是getJSON：
- </script></p>
-<blockquote>
-  <p>getJSON: function( url, data, callback ) { 
+ 
+</code></pre>
+</div>
+<p>getJSON: function( url, data, callback ) { 
 return jQuery.get(url, data, callback, “json”);
 },</p>
-</blockquote>
 
 <p>继续跟进
- </p>
-<blockquote>
-  <p><code class="highlighter-rouge">get: function( url, data, callback, type ) { 
+ 
+get: function( url, data, callback, type ) { 
     // shift arguments if data argument was omited 
     if ( jQuery.isFunction( data ) ) { 
         type = type || callback; 
@@ -153,28 +170,26 @@ return jQuery.get(url, data, callback, “json”);
         data = null; 
     } 
     return jQuery.ajax({ 
-        type: "GET", 
+        type: “GET”, 
         url: url, 
         data: data, 
         success: callback, 
         dataType: type 
-    });</code></p>
-</blockquote>
+    });`</p>
 
 <p>跟进jQuery.ajax，下面是ajax方法的代码片段：</p>
-<blockquote>
-  <p><code class="highlighter-rouge">
-// Build temporary JSONP function
-if ( s.dataType === "json" &amp;&amp; (s.data &amp;&amp; jsre.test(s.data) || jsre.test(s.url)) ) { 
-     jsonp = s.jsonpCallback || ("jsonp" + jsc++); 
+
+<p>// Build temporary JSONP function
+if ( s.dataType === “json” &amp;&amp; (s.data &amp;&amp; jsre.test(s.data) || jsre.test(s.url)) ) { 
+     jsonp = s.jsonpCallback || (“jsonp” + jsc++); 
     // Replace the =? sequence both in the query string and the data 
     if ( s.data ) { 
-        s.data = (s.data + "").replace(jsre, "=" + jsonp + "$1"); 
+        s.data = (s.data + “”).replace(jsre, “=” + jsonp + “$1”); 
     } 
-    s.url = s.url.replace(jsre, "=" + jsonp + "$1"); 
+    s.url = s.url.replace(jsre, “=” + jsonp + “$1”); 
     // We need to make sure 
     // that a JSONP style response is executed properly 
-    s.dataType = "script"; 
+    s.dataType = “script”; 
     // Handle JSONP-style loading 
     window[ jsonp ] = window[ jsonp ] || function( tmp ) { 
         data = tmp; 
@@ -190,32 +205,32 @@ if ( s.dataType === "json" &amp;&amp; (s.data &amp;&amp; jsre.test(s.data) || js
         } 
     };
 }
-if ( s.dataType === "script" &amp;&amp; s.cache === null ) { 
+if ( s.dataType === “script” &amp;&amp; s.cache === null ) { 
     s.cache = false;
 }
-if ( s.cache === false &amp;&amp; type === "GET" ) { 
+if ( s.cache === false &amp;&amp; type === “GET” ) { 
     var ts = now(); 
-    // try replacing _= if it is there 
-    var ret = s.url.replace(rts, "$1_=" + ts + "$2"); 
+    // try replacing <em>= if it is there 
+    var ret = s.url.replace(rts, “$1</em>=” + ts + “$2”); 
     // if nothing was replaced, add timestamp to the end 
-    s.url = ret + ((ret === s.url) ? (rquery.test(s.url) ? "&amp;" : "?") + "_=" + ts : "");
+    s.url = ret + ((ret === s.url) ? (rquery.test(s.url) ? “&amp;” : “?”) + “_=” + ts : “”);
 }
 // If data is available, append data to url for get requests
-if ( s.data &amp;&amp; type === "GET" ) { 
-    s.url += (rquery.test(s.url) ? "&amp;" : "?") + s.data;
+if ( s.data &amp;&amp; type === “GET” ) { 
+    s.url += (rquery.test(s.url) ? “&amp;” : “?”) + s.data;
 }
 // Watch for a new set of requests
 if ( s.global &amp;&amp; ! jQuery.active++ ) { 
-    jQuery.event.trigger( "ajaxStart" );
+    jQuery.event.trigger( “ajaxStart” );
 }
 // Matches an absolute URL, and saves the domain
 var parts = rurl.exec( s.url ), 
     remote = parts &amp;&amp; (parts[1] &amp;&amp; parts[1] !== location.protocol || parts[2] !== location.host);
-// If we're requesting a remote document
+// If we’re requesting a remote document
 // and trying to load JSON or Script with a GET
-if ( s.dataType === "script" &amp;&amp; type === "GET" &amp;&amp; remote ) { 
-    var head = document.getElementsByTagName("head")[0] || document.documentElement; 
-    var script = document.createElement("script"); 
+if ( s.dataType === “script” &amp;&amp; type === “GET” &amp;&amp; remote ) { 
+    var head = document.getElementsByTagName(“head”)[0] || document.documentElement; 
+    var script = document.createElement(“script”); 
     script.src = s.url; 
     if ( s.scriptCharset ) { 
         script.charset = s.scriptCharset; 
@@ -225,7 +240,7 @@ if ( s.dataType === "script" &amp;&amp; type === "GET" &amp;&amp; remote ) {
         var done = false; 
         // Attach handlers for all browsers 
         script.onload = script.onreadystatechange = function() { 
-            if ( !done &amp;&amp; (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") ) { 
+            if ( !done &amp;&amp; (!this.readyState || this.readyState === “loaded” || this.readyState === “complete”) ) { 
                 done = true; 
                 success(); 
                 complete(); 
@@ -242,30 +257,42 @@ if ( s.dataType === "script" &amp;&amp; type === "GET" &amp;&amp; remote ) {
     head.insertBefore( script, head.firstChild ); 
     // We handle everything using the script element injection 
     return undefined;
-}</code></p>
-</blockquote>
+}</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+上面的代码第1行到第10行：判断是JSON类型调用，为本次调用创建临时的JsonP方法，并且添加了一个随机数字，这个数字源于用日期值；
 
-<p>上面的代码第1行到第10行：判断是JSON类型调用，为本次调用创建临时的JsonP方法，并且添加了一个随机数字，这个数字源于用日期值；
- 关注第14行，这一行相当关键，注定了我们的结果最终是<script> ;然后是构造Script片段，第95行在Head中添加该片段，修成正果；
- 不仅仅是jQuery,很多js框架都是用了同样的跨域方案，这就是getJSON跨域的原理。</script></p>
+关注第14行，这一行相当关键，注定了我们的结果最终是&lt;Script&gt; ;然后是构造Script片段，第95行在Head中添加该片段，修成正果；
 
-<p><strong>追加一种解决方式</strong>
-追求永无止境，在google的过程中，无意中发现了一个专门用来解决跨域问题的jQuery插件-<a href="https://github.com/congmo/jquery-jsonp">jquery-jsonp</a>。
+不仅仅是jQuery,很多js框架都是用了同样的跨域方案，这就是getJSON跨域的原理。
+
+**追加一种解决方式**
+
+追求永无止境，在google的过程中，无意中发现了一个专门用来解决跨域问题的jQuery插件-[jquery-jsonp](https://github.com/congmo/jquery-jsonp)。
+
 有第一种方式的基础，使用jsonp插件也就比较简单了，server端代码无需任何改动。
-来看一下如何使用jquery-jsonp插件解决跨域问题吧。</p>
-<blockquote>
-  <p><code class="highlighter-rouge">
-var url="http://localhost:8080/WorkGroupManagment/open/getGroupById" +"?id=1&amp;callback=?";
+
+来看一下如何使用jquery-jsonp插件解决跨域问题吧。
+
+</code></pre>
+</div>
+<p>var url=”http://localhost:8080/WorkGroupManagment/open/getGroupById” +”?id=1&amp;callback=?”;
 $.jsonp({ 
-    "url": url, 
-    "success": function(data) { 
-        $("#current-group").text("当前工作组:"+data.result.name); 
+    “url”: url, 
+    “success”: function(data) { 
+        $(“#current-group”).text(“当前工作组:”+data.result.name); 
     }, 
-    "error": function(d,msg) { 
-                alert("Could not find user "+msg); 
+    “error”: function(d,msg) { 
+                alert(“Could not find user “+msg); 
     }
-});</code></p>
-</blockquote>
+});
+```</p>
+
+    </div>
+    <div class="article_menu">
+        
+    </div>
+</div>
+
 
         
         <footer>

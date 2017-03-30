@@ -1,0 +1,41 @@
+---
+layout: default
+title: MF、Wang's blog
+---
+<div class="index_banner">
+    <h1 class="index_banner_title">{{ page.title }}</h1>
+    <h3 class="index_banner_desc">{{ site.index_desc }}</h3>
+</div>
+<div class="index_content">
+    <div class="article">
+    </div>
+    <div class="person">
+        <div class="person__tags">
+            <a href="" class="title">TAGS</a>
+            {% for tag in site.Tags %}
+                <a href="{{ tag.link }}" class="person__tags_link">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        <div class="person__about">
+            <a href="" class="title">ABOUT ME</a>
+            <img src="/img/head.jpeg" alt="">
+            <p>{{ site.index_desc }}</p>
+            <p>{{ site.index_desc2 }}</p>
+            <div class="links">
+                {% for personAccount in site.person_account %}
+                    <a href="{{ personAccount.link }}" target="_blank" class="person__about_link">
+                        <i class="iconfont icon_{{ personAccount.type }}"></i>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="person__friends">
+            <a href="" class="title">FRIENDS</a>
+            {% for friend in site.Friends %}
+                <a href="{{ friend.link }}" target="_blank" class="person__friends_link" data-hover="{{ friend.name }}">
+                    {{ friend.name }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

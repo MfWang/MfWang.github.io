@@ -5,117 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
-    <title>你所不知道的-Console</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>你所不知道的Console</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="site">
         <header>
     <div class="header__content">
         
-            <a class="header__link" href=""> Home</a>
+            <a class="header__link" href="/"> Home</a>
         
-            <a class="header__link" href=""> About</a>
+            <a class="header__link" href="/about.html"> About</a>
+        
+            <a class="header__link" href="/project.html"> Project</a>
         
     </div>
 </header>
 
-        <p><strong>1.凡人视角</strong>
-<em>**</em>
-　　打印字符串</p>
+        <div class="index_banner">
+    <h1 class="index_banner_title">你所不知道的Console</h1>
+    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+</div>
+<div class="article_content">
+    <div class="article_detail">
+        <p><strong>1.凡人视角</strong></p>
+
+<p>打印字符串</p>
+
 <blockquote>
   <p>console.log(“I am a 凡人”);</p>
 </blockquote>
 
-<p>　　打印提示消息</p>
+<p>打印提示消息</p>
 <blockquote>
   <p>console.info(“Yes, you arm a 凡人”);</p>
 </blockquote>
 
-<p>　　打印警告消息</p>
+<p>打印警告消息</p>
 <blockquote>
   <p>console.warn(“凡人你居然敢窥视我”);</p>
 </blockquote>
 
-<p>　　打印错误消息</p>
+<p>打印错误消息</p>
 <blockquote>
   <p>console.error(“天兵天将，把这个凡人给我打入地狱”);</p>
 </blockquote>
 
-<p>　　打印调试信息</p>
+<p>打印调试信息</p>
 <blockquote>
   <p>console.debug(“我就是传说中的debug”);</p>
 </blockquote>
 
-<hr />
-<p><strong>　　2.上帝视角</strong>
-<em>**</em>
-　　查看所有方法
-　　console 除了上面的几个方法还有什么方法呢?log 除了能打印字符串外，还能打印出对象，我们可以利用 console.log 打印自己。</p>
-<blockquote>
-  <p>console.log(console);</p>
-</blockquote>
+<p><strong>2.上帝视角</strong></p>
 
-<p>　　输出：</p>
-<blockquote>
-  <p>Object {
-assert: …,   
-clear: …,
-count: …,
-debug: …,
-dir: …,
-dirxml: …,
-error: …,
-group: …,
-groupCollapsed: …,
-groupEnd: …,
-info: …,
-log: …,
-markTimeline: …,
-profile: …,
-profileEnd: …,
-table: …,
-time: …,
-timeEnd: …,
-timeStamp: …,
-timeline: …,
-timelineEnd: …,
-trace: …,
-warn: …
-}</p>
-</blockquote>
+<p>查看所有方法</p>
 
-<p>　　啊咧咧?怎么这么多方法。其实上面的 console 方法 不一定每个浏览器 都有实现，我这边使用的是 chrome浏览器 。所以说，这个特性是非标准的，请尽量不要在 生产环境 中使用它。
-　　但是我们可以在 开发环境 中，合理的利用 这些方法来帮助我们开发。</p>
+<p>console 除了上面的几个方法还有什么方法呢?log 除了能打印字符串外，还能打印出对象，我们可以利用 console.log 打印自己。</p>
 
-<p><strong>　　清理控制台</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>console.log(console);
+输出：
+Object {
+	assert: ...,   
+	clear: ...,
+	count: ...,
+	debug: ...,
+	dir: ...,
+	dirxml: ...,
+	error: ...,
+	group: ...,
+	groupCollapsed: ...,
+	groupEnd: ...,
+	info: ...,
+	log: ...,
+	markTimeline: ...,
+	profile: ...,
+	profileEnd: ...,
+	table: ...,
+	time: ...,
+	timeEnd: ...,
+	timeStamp: ...,
+	timeline: ...,
+	timelineEnd: ...,
+	trace: ...,
+	warn: ...
+}
+</code></pre>
+</div>
 
-<p>　　如果我们在控制台调试的时候，难免 强迫症 发作想清理掉已经乱七八糟的控制台。浏览器和命令行 clear 一样提供了一个清理函数console.clear() 。</p>
+<p>啊咧咧?怎么这么多方法。其实上面的 console 方法 不一定每个浏览器 都有实现，我这边使用的是 chrome浏览器 。所以说，这个特性是非标准的，请尽量不要在 生产环境 中使用它。</p>
+
+<p>但是我们可以在 开发环境 中，合理的利用 这些方法来帮助我们开发。</p>
+
+<p><strong>清理控制台</strong></p>
+
+<p>如果我们在控制台调试的时候，难免 强迫症 发作想清理掉已经乱七八糟的控制台。浏览器和命令行 clear 一样提供了一个清理函数console.clear() 。</p>
+
 <blockquote>
   <p>console.clear()</p>
 </blockquote>
 
-<p>　　当然我们也可以用 chrome 的 command line api 来清理控制台。
-　　clear()
-　　又或者可以使用按键Mac上 cmd + k ，Win ctrl + l(我用的是chrome浏览器)。</p>
+<p>当然我们也可以用 chrome 的 command line api 来清理控制台。
+clear()
+又或者可以使用按键Mac上 cmd + k ，Win ctrl + l(我用的是chrome浏览器)。</p>
 
-<p>　　<strong>分组</strong>
-<em>**</em>
-　　当代码非常长，或者我们需要把一个函数，或者一个文件中的函数等区分出来。我们可以使用分组来实现。
-　　代码：</p>
-<blockquote>
-  <p>console.group(‘凡人’);
-console.log(“手”);
-console.log(“脚”);
+<p><strong>分组</strong></p>
+
+<p>当代码非常长，或者我们需要把一个函数，或者一个文件中的函数等区分出来。我们可以使用分组来实现。</p>
+
+<p>代码：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>console.group('凡人');
+console.log("手");
+console.log("脚");
 console.groupEnd();
-console.group(‘神’);
-console.log(“法力无边”);
-console.log(“腾云架雾”);
-console.groupEnd();</p>
-</blockquote>
+console.group('神');
+console.log("法力无边");
+console.log("腾云架雾");
+console.groupEnd();
+</code></pre>
+</div>
 
-<p>　　输出：
-<a href="http://www.html5cn.org/data/attachment/portal/201609/09/080656mub3phzy0pttcc6p.jpg"><img src="https://app.yinxiang.com/shard/s64/res/d748a198-f075-48f9-a2f3-f89ae8de8741.jpg" alt="" /></a></p>
+<p>输出：</p>
+
+<p><a href="http://www.html5cn.org/data/attachment/portal/201609/09/080656mub3phzy0pttcc6p.jpg"><img src="https://app.yinxiang.com/shard/s64/res/d748a198-f075-48f9-a2f3-f89ae8de8741.jpg" alt="" /></a></p>
 
 <p>　　如果想要输出为折叠，我们可以使用 console.groupCollapsed ，用法和 console.group 类似。
 　　查看对象信息
@@ -259,6 +270,13 @@ for(var i = 0; i &lt; 10; i++) {
 
 <p>原文链接：<a href="https://segmentfault.com/a/1190000006721606">https://segmentfault.com/a/1190000006721606</a>
 来源作者：ZHANGXIANGLIANG</p>
+
+    </div>
+    <div class="article_menu">
+        
+    </div>
+</div>
+
 
         
         <footer>

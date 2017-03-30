@@ -28,6 +28,13 @@
     justify-content: center;
 }
 
+.article_content{
+    width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 

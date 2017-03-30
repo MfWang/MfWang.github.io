@@ -6,49 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <title>jQuery处理对象数组</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="site">
         <header>
     <div class="header__content">
         
-            <a class="header__link" href=""> Home</a>
+            <a class="header__link" href="/"> Home</a>
         
-            <a class="header__link" href=""> About</a>
+            <a class="header__link" href="/about.html"> About</a>
+        
+            <a class="header__link" href="/project.html"> Project</a>
         
     </div>
 </header>
 
-        <p>###jQuery删除数组中指定的一条记录</p>
+        <div class="index_banner">
+    <h1 class="index_banner_title">jQuery处理对象数组</h1>
+    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+</div>
+<div class="article_content">
+    <div class="article_detail">
+        <h1 id="jquery删除数组中指定的一条记录">jQuery删除数组中指定的一条记录</h1>
 
-<blockquote>
-  <p><code class="highlighter-rouge"> 
-var arrList = ['a','b','c','d'];  
+<div class="highlighter-rouge"><pre class="highlight"><code>var arrList = ['a','b','c','d'];  
 arrList.splice(1,1);  
-console.log(arrList)</code>
-以上是数组的示例
-list.splice(start,num);<br />
+console.log(arrList)
+</code></pre>
+</div>
+<p>以上是数组的示例</p>
+
+<p>list.splice(start,num);<br />
 start:要删除的起始位置
 num:要删除的个数</p>
-</blockquote>
 
-<p>###接下来是对对象数组的操作</p>
-<blockquote>
-  <p><code class="highlighter-rouge">var list = [  
+<h1 id="接下来是对对象数组的操作">接下来是对对象数组的操作</h1>
+<div class="highlighter-rouge"><pre class="highlight"><code>var list = [  
     {    name:"w",    id:"1",    "age":21  }, 
     {    name:"e",    id:"2",    "age":22  },  
     {    name:"r",    id:"3",    "age":21  }, 
     {    name:"t",    id:"4",    "age":25  },  
     {    name:"y",    id:"5",    "age":21  }
-]</code></p>
-  <blockquote>
-    <p>对对象数组的操作，删除指定id=5的那条记录</p>
-  </blockquote>
-</blockquote>
+]
+</code></pre>
+</div>
 
-<blockquote>
-  <p><code class="highlighter-rouge">function opt(){  
+<p>对对象数组的操作，删除指定id=5的那条记录</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>function opt(){  
     console.log(list);  
     $.each(list, function (key,val) {   
         if(val.id == '5'){      
@@ -58,13 +64,13 @@ num:要删除的个数</p>
     })  
     list.splice($.inArray('',list),1);  
     console.log(list)  
-}</code>
-opt()这个方法是先遍历，找到需要删除的那条记录，然后将它变成’‘，再通过splice来删除
+}
+</code></pre>
+</div>
+<p>opt()这个方法是先遍历，找到需要删除的那条记录，然后将它变成’‘，再通过splice来删除
 后来发现splice并不需要这么麻烦，可以直接用索引来删除</p>
-</blockquote>
 
-<blockquote>
-  <p><code class="highlighter-rouge">function opt2(){  
+<div class="highlighter-rouge"><pre class="highlight"><code>function opt2(){  
     console.log(list);  
     for(var i = 0 ;i &lt; list.length; i++){    
         console.log(i)    
@@ -74,10 +80,18 @@ opt()这个方法是先遍历，找到需要删除的那条记录，然后将它
         }  
     }  
     console.log(list)
-}</code></p>
-</blockquote>
+}
+</code></pre>
+</div>
 
-<p>####后续会跟进对象数组的增删改查操作</p>
+<h4 id="后续会跟进对象数组的增删改查操作">后续会跟进对象数组的增删改查操作</h4>
+
+    </div>
+    <div class="article_menu">
+        
+    </div>
+</div>
+
 
         
         <footer>

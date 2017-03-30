@@ -6,29 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <title>css权重</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="site">
         <header>
     <div class="header__content">
         
-            <a class="header__link" href=""> Home</a>
+            <a class="header__link" href="/"> Home</a>
         
-            <a class="header__link" href=""> About</a>
+            <a class="header__link" href="/about.html"> About</a>
+        
+            <a class="header__link" href="/project.html"> Project</a>
         
     </div>
 </header>
 
-        <table>
-  <tbody>
-    <tr>
-      <td>important &gt; 内联 &gt; ID &gt; 类 &gt; 标签</td>
-      <td>伪类</td>
-      <td>属性选择 &gt; 伪对象 &gt; 继承 &gt; 通配符”</td>
-    </tr>
-  </tbody>
-</table>
+        <div class="index_banner">
+    <h1 class="index_banner_title">css权重</h1>
+    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+</div>
+<div class="article_content">
+    <div class="article_detail">
+        <blockquote>
+  <p><code class="highlighter-rouge">important &gt; 内联 &gt; ID &gt; 类 &gt; 标签 | 伪类 | 属性选择 &gt; 伪对象 &gt; 继承 &gt; 通配符</code></p>
+</blockquote>
 
 <p>我们在使用CSS对网页元素定义样式时经常会遇到这种情况：要对一般元素应用一般样式，然后在更特殊的元素上覆盖它们。那么我们怎么样来保证我们所新定义的元素样式能覆盖目标元素上原有的样式呢？</p>
 
@@ -40,61 +42,74 @@
 
 <p>4个等级的定义如下：</p>
 <blockquote>
-  <p>第一等：代表内联样式，如: style=””，权值为1000。
-   第二等：代表ID选择器，如：#content，权值为100。
-   第三等：代表类，伪类和属性选择器，如.content，权值为10。
-   第四等：代表类型选择器和伪元素选择器，如div p，权值为1。</p>
+  <ul>
+    <li>第一等：代表内联样式，如: style=””，权值为1000。</li>
+    <li>第二等：代表ID选择器，如：#content，权值为100。</li>
+    <li>第三等：代表类，伪类和属性选择器，如.content，权值为10。</li>
+    <li>第四等：代表类型选择器和伪元素选择器，如div p，权值为1。</li>
+  </ul>
 </blockquote>
 
-<p>例如上图为例，其中#NAV为二等选择器，.ACTIVE为三等选择器，UL、LI和A为四等选择器。则整个选择器表达式的特殊性的值为1<em>100+1</em>10+3*1=113</p>
+<p>例如上图为例，其中#NAV为二等选择器，.ACTIVE为三等选择器，UL、LI和A为四等选择器。则整个选择器表达式的特殊性的值为 <code class="highlighter-rouge">1 * 100 + 1 * 10 + 3 * 1 = 113</code></p>
 
-<p>下面是一些计算示例：
-<img src="http://upload-images.jianshu.io/upload_images/1874069-a6d4c24d53239750.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" />
-注意：通用选择器（*），子选择器（&gt;）和相邻同胞选择器（+）并不在这四个等级中，所以他们的权值都为0。</p>
+<p>下面是一些计算示例：</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/1874069-a6d4c24d53239750.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>注意：通用选择器（*），子选择器（&gt;）和相邻同胞选择器（+）并不在这四个等级中，所以他们的权值都为0。</p>
 
 <p>我们再来看一个具体的例子：假如有以下组样式规则，你能判断出HTML代码中的两个标题是什么颜色吗？</p>
 
-<blockquote>
-  <p>#content div#main-content h2{
+<div class="highlighter-rouge"><pre class="highlight"><code>#content div#main-content h2{
     color:red;
 }
 #content #main-content&gt;h2{
     color:blue
 }
-body #content div[id=”main-content”] h2{
+body #content div[id="main-content"] h2{
         color:green;
 }
 #main-content div.paragraph h2{
         color:orange;
 }
-#main-content [class=”paragraph”] h2{
+#main-content [class="paragraph"] h2{
         color:yellow;
 }
 div#main-content div.paragraph h2.first{
         color:pink;
 }
-以下是HTML代码：
-       &gt; &gt;<code class="highlighter-rouge">&lt;div id="content"&gt; </code>
-                <code class="highlighter-rouge">&lt;div id="main-content"&gt; </code>
-               ` &lt;h2&gt;CSS简介&lt;/h2&gt;<code class="highlighter-rouge">
-                </code>&lt;p&gt;CSS（Cascading Style Sheet，可译为“层叠样式表”或“级联样式表”）是一组格式设置规则，用于控制Web页面的外观。&lt;/p&gt;<code class="highlighter-rouge">
-               </code> &lt;div class="paragraph"&gt;<code class="highlighter-rouge">
-                         </code>&lt;h2 class="first"&gt;使用CSS布局的优点&lt;/h2&gt; `
-                         <code class="highlighter-rouge">&lt;p&gt;1、表现和内容相分离 2、提高页面浏览速度 3、易于维护和改版 4、使用CSS布局更符合现在的W3C标准.&lt;/p&gt; </code>
-                 <code class="highlighter-rouge">&lt;/div&gt; </code>
-        ` &lt;/div&gt; `
- <code class="highlighter-rouge">&lt;/div&gt; </code></p>
-</blockquote>
+</code></pre>
+</div>
+
+<p>以下是HTML代码：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div id="content"&gt;
+	&lt;div id="main-content"&gt;
+ 		&lt;h2&gt;CSS简介&lt;/h2&gt;
+		&lt;p&gt;CSS（Cascading Style Sheet，可译为“层叠样式表”或“级联样式表”）是一组格式设置规则，用于控制Web页面的外观。&lt;/p&gt;
+		&lt;div class="paragraph"&gt;
+			&lt;h2 class="first"&gt;使用CSS布局的优点&lt;/h2&gt; 
+			&lt;p&gt;1、表现和内容相分离 2、提高页面浏览速度 3、易于维护和改版 4、使用CSS布局更符合现在的W3C标准.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
 
 <p>判断出来了么？答案是：两个标题都是红色的！
-让我们来一起算算六个样式规则各自的特殊性的值：</p>
+让我们来一起算算六个样式规则各自的特殊性的值:</p>
 <blockquote>
-  <p>第一个特殊性的值=2<em>100+2</em>1=202
-    第二个特殊性的值=2<em>100+1=201
-    第三个特殊性的值=1</em>100+1<em>10+3</em>1=113
-    第四个特殊性的值=1<em>100+1</em>10+2<em>1=112
-    第五个特殊性的值=1</em>100+1<em>10+1</em>1=111
-    第六个特殊性的值=1<em>100+2</em>10+3*1=123</p>
+  <p>第一个特殊性的值 = <code class="highlighter-rouge">2 * 100 + 2 * 1 = 202</code></p>
+
+  <p>第二个特殊性的值 = <code class="highlighter-rouge">2 * 100 + 1 = 201</code></p>
+
+  <p>第三个特殊性的值 = <code class="highlighter-rouge">1 * 100 + 1 * 10 + 3 * 1 = 113</code></p>
+
+  <p>第四个特殊性的值 = <code class="highlighter-rouge">1 * 100 + 1 * 10 + 2 * 1 = 112</code></p>
+
+  <p>第五个特殊性的值 = <code class="highlighter-rouge">1 * 100 + 1 * 10 + 1 * 1 = 111</code></p>
+
+  <p>第六个特殊性的值 = <code class="highlighter-rouge">1 * 100 + 2 * 10 + 3 * 1 = 123</code></p>
 </blockquote>
 
 <p>清楚了吧，第一个样式规则以其202的高分一举夺得了本次样式选择器特殊性大赛的冠军，后面一些规则虽然看起来好像更复杂，但特殊性并不是拼谁的选择器表达式写得更长，ID选择器才是王道！</p>
@@ -102,6 +117,13 @@ div#main-content div.paragraph h2.first{
 <p>理解选择器的特殊性很重要，特别是在修复bug的时候，因为你需要了解哪些规则优先及其原因。</p>
 
 <p>如果你遇到了似乎没有起作用的CSS规则，很可能是出现了特殊性冲突。请在你的选择器中添加他的一个父元素的ID，从而提高它的特殊性。如果这能解决问题，就说明样式表中其他地方很可能有更特殊的规则，它覆盖了你的规则。如果是这种情况，你可能需要检查代码，解决特殊性冲突，让代码尽可能简洁。</p>
+
+    </div>
+    <div class="article_menu">
+        
+    </div>
+</div>
+
 
         
         <footer>

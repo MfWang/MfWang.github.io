@@ -6,20 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <title>火狐浏览器获取不到iconfont</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="site">
         <header>
     <div class="header__content">
         
-            <a class="header__link" href=""> Home</a>
+            <a class="header__link" href="/"> Home</a>
         
-            <a class="header__link" href=""> About</a>
+            <a class="header__link" href="/about.html"> About</a>
+        
+            <a class="header__link" href="/project.html"> Project</a>
         
     </div>
 </header>
 
+        <div class="index_banner">
+    <h1 class="index_banner_title">火狐浏览器获取不到iconfont</h1>
+    <h3 class="index_banner_desc">离开世界之前，一切都只是过程</h3>
+</div>
+<div class="article_content">
+    <div class="article_detail">
         <p>可能的原因是：firefox（28.0）对icon font的目录解析bug导致出现问题。</p>
 
 <p>我尝试着调整CSS文件的位置以及icon font文件的位置，以期找到问题的真正原因。我做了很多次调整，但是从这些结果中我不能总结出一个满意的规律来。自己也觉得很懊恼。在这里只能给个勉强的解决方法：就是把icon font对应的CSS文件和icon font文件都放在也HTML同级目录或者子目录下，然后正确的引入即可。
@@ -38,6 +46,13 @@
         url('fonts/madtry.svg#madtry') format('svg'); /* ios4.1 */
 }</code></p>
 </blockquote>
+
+    </div>
+    <div class="article_menu">
+        
+    </div>
+</div>
+
 
         
         <footer>

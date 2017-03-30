@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: jquery ajax 跨域
 tag: webpack react
 project: 前端开发
@@ -7,10 +7,13 @@ project: 前端开发
 
 [jquery ajax 跨域](http://www.cnblogs.com/sunxucool/p/3430914.html)
 
-客户端“跨域访问”一直是一个头疼的问题，好在有jQuery帮忙，从jQuery-1.2以后跨域问题便迎刃而解。由于自己在项目中遇到跨域问题，借此机会对跨域问题来刨根问底，查阅了相关资料和自己的实践，算是解决了跨域问题。便记录下来，以供查阅。        
- jQuery.ajax()支持get方式的跨域，这其实是采用jsonp的方式来完成的。        
-真实案例：        
->`
+客户端“跨域访问”一直是一个头疼的问题，好在有jQuery帮忙，从jQuery-1.2以后跨域问题便迎刃而解。由于自己在项目中遇到跨域问题，借此机会对跨域问题来刨根问底，查阅了相关资料和自己的实践，算是解决了跨域问题。便记录下来，以供查阅。
+
+jQuery.ajax()支持get方式的跨域，这其实是采用jsonp的方式来完成的。
+
+真实案例：
+
+```
 $.ajax({ 
     async:false, 
     url: 'http://www.mysite.com/demo.do', // 跨域URL 
@@ -39,15 +42,18 @@ $.ajax({
         //请求出错处理 
         alert("请求出错(请检查相关度网络状况.)"); 
     }
-});`
+});
+```
 
-注意：        
->`
+注意:
+
+```
 $.getJSON(" http://www.mysite.com/demo.do?name1="+value1+"&callback=?", function(json){
         if(json.属性名==值){ 
             // 执行代码 
         } 
-});`
+});
+```
 
 这种方式其实是上例$.ajax({..}) api的一种高级封装，有些$.ajax api底层的参数就被封装而不可见了。    
 

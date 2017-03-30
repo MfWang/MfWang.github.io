@@ -4,7 +4,7 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(255,255,255,0.3);
+    /*background: rgba(255,255,255,0.3);*/
 }
 .header__content{
     width: 1060px;
@@ -19,4 +19,27 @@ header{
     width: 100px;
     display: block;
     text-align: center;
+    position: relative;
+	transition: color 0.3s;
+}
+.header__link::before {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	color: transparent;
+	content: '•';
+	text-shadow: 0 0 transparent;
+	font-size: 1.2em;
+	transition: text-shadow 0.3s, color 0.3s;
+}
+
+.header__link:hover::before,
+.header__link:focus::before {
+	color: #fff;
+	text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+.header__link:hover,
+.header__link:focus {
+	color: #ba7700;
 }

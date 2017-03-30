@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: gitlab配置ssh-key
 tag: webpack react
 project: 前端开发

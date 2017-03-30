@@ -93,12 +93,16 @@ exclude:
 header_menu: [
   {
     name: "Home",
-    link: ""
+    link: "/"
   },
   {
     name: "About",
-    link: ""
+    link: "/about.html"
   },
+  {
+    name: "Project",
+    link: "/project.html"
+  }
 ]
 
 # Index
@@ -107,7 +111,8 @@ index_desc: "写写代码，做做设计"
 index_desc2: "离开世界之前，一切都只是过程"
 
 # Post
-
+post_title: "博客详情"
+post_desc: "离开世界之前，一切都只是过程"
 
 
 # Tags

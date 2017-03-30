@@ -1,4 +1,30 @@
 ---
 layout: default
 ---
-{{ content }}
+<div class="index_banner">
+    <h1 class="index_banner_title">{{ page.title }}</h1>
+    <h3 class="index_banner_desc">{{ site.post_desc }}</h3>
+</div>
+<div class="article_content">
+    <div class="article_detail">
+        {{ content }}
+    </div>
+    <div class="article_menu">
+        {% if page.catalog %}
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
