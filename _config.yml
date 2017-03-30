@@ -100,8 +100,8 @@ header_menu: [
     link: "/about.html"
   },
   {
-    name: "Project",
-    link: "/project.html"
+    name: "Production",
+    link: "/production.html"
   }
 ]
 
