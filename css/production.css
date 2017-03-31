@@ -56,7 +56,7 @@
 }
 .projects .projects_item_link2{
     border: 1px solid #edeeee;
-    width: 100px;
+    padding: 0 20px;
     height: 50px;
     text-align: center;
     line-height: 50px;

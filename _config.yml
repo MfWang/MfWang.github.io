@@ -110,9 +110,9 @@ index_title: "MF、Wang's blog"
 index_desc: "写写代码，做做设计"
 index_desc2: "离开世界之前，一切都只是过程"
 
-# Post
-post_title: "博客详情"
-post_desc: "离开世界之前，一切都只是过程"
+# Production
+production_title: "作品集合"
+production_desc: "离开世界之前，一切都只是过程"
 
 
 # Tags
@@ -140,5 +140,42 @@ Friends: [
   {
     name: "quantre",
     link: "http://www.jianshu.com/u/36b0a1cd2abe"
+  }
+]
+
+# Produtions
+github_template_link: "http://htmlpreview.github.io/?"
+Productions: [
+  {
+    name: "Graphical",
+    date: "2016.08",
+    img: "",
+    summary: "纯CSS绘制图形",
+    tag: [],
+    link: "https://github.com/MfWang/Production/blob/master/Graphical/graphical.html"
+  },
+  {
+    name: "Button",
+    date: "2016.10",
+    img: "",
+    summary: "Button样式集合",
+    tag: [],
+    link: "https://github.com/MfWang/Production/blob/master/button/button.html"
+  },
+  {
+    name: "Loading",
+    date: "2016.11",
+    img: "",
+    summary: "",
+    tag: [],
+    link: "https://github.com/MfWang/Production/blob/master/Loading/loading.html"
+  },
+  {
+    name: "PhoneMenu",
+    date: "2017.03",
+    img: "",
+    summary: "",
+    tag: [],
+    link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html"
   }
 ]
