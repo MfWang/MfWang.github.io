@@ -1,21 +1,26 @@
-footer{
-    width: 100%;
-    background: #fff;
-    padding: 50px 0;
-    border-top: 1px solid #ededed;
-    margin: 50px 0 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+  width: 100%;
+  background: #fff;
+  padding: 50px 0;
+  border-top: 1px solid #ededed;
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.footer_link{
-    display: block;
+
+.footer_link {
+  display: block;
 }
-.footer_link .iconfont{
-    font-size: 60px;
-    color: #000;
-    margin: 0 10px;
+
+.footer_link .iconfont {
+  font-size: 60px;
+  color: #000;
+  margin: 0 10px;
 }
-.footer_link .iconfont:hover{
-    color: #189df7;
+
+.footer_link .iconfont:hover {
+  color: #189df7;
 }
+
+/*# sourceMappingURL=footer.css.map */

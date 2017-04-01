@@ -1,0 +1,37 @@
+$fonts: (
+  ("twitter", "\e71f"),
+  ("github", "\e735"),
+  ("zhihu", "\e62c"),
+  ("jianshu", "\e644"),
+  ("facebook", "\e507"),
+  ("sina", "\e62e"),
+  ("wechat", "\e64c"),
+  ("qq", "\e616"),
+  ("tag2", "\e62b"),
+  ("date", "\e619"),
+  ("tag", "\e905"),
+  ("category", "\e640"),
+  ("arrowleft", "\e501"),
+  ("arrowright", "\e614"),
+  ("arrowtop", "\e649"),
+);
+@font-face {font-family: "iconfont";
+    src: url('../fonts/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('../fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+@each $fontsitem in $fonts {
+  .icon_#{nth($fontsitem, 1)}:before {
+    content: nth($fontsitem, 2);
+  }
+}

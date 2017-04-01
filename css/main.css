@@ -2,6 +2,9 @@
 @import './site.css';
 @import './iconfont.css';
 
+@import './owl.carousel.css';
+@import './owl.theme.css';
+
 @import './header.css';
 @import './footer.css';
 
@@ -10,11 +13,3 @@
 @import './about.css';
 @import './production.css';
 @import './resume.css';
-
-
-
-
-
-
-
-
