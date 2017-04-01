@@ -1,4 +1,6 @@
-* ,html,body{
+* ,
+html,
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,10 +9,17 @@
 body{
     min-width: 1060px;
 }
-ul, li{
+ul,
+li{
     list-style-type: none;
 }
-h1,h2,h3,h4,h5,h6,p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
     margin: 0;
     padding: 0;
 }
@@ -22,4 +31,5 @@ a:active{
     text-decoration: none;
     color: #000;
     cursor: pointer;
+    outline: none;
 }

@@ -82,6 +82,7 @@ theme: minima
 gems: 
  - jekyll-feed
  - jekyll-paginate
+
 paginate: 10  
 paginate_path: "page:num" 
 
@@ -102,6 +103,10 @@ header_menu: [
   {
     name: "Production",
     link: "/production.html"
+  },
+  {
+    name: "Resume",
+    link: "/resume.html"
   }
 ]
 

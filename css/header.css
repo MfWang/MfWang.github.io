@@ -4,7 +4,7 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    /*background: rgba(255,255,255,0.3);*/
+    z-index: 2;
 }
 .header__content{
     width: 1060px;
@@ -16,7 +16,7 @@ header{
     font-size: 20px;
     line-height: 50px;
     color: #fff;
-    width: 100px;
+    padding: 0 20px;
     display: block;
     text-align: center;
     position: relative;
@@ -32,13 +32,11 @@ header{
 	font-size: 1.2em;
 	transition: text-shadow 0.3s, color 0.3s;
 }
-
 .header__link:hover::before,
 .header__link:focus::before {
 	color: #fff;
 	text-shadow: 10px 0 #fff, -10px 0 #fff;
 }
-
 .header__link:hover,
 .header__link:focus {
 	color: #ba7700;
