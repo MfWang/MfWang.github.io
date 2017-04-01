@@ -115,10 +115,17 @@ index_title: "MF、Wang's blog"
 index_desc: "写写代码，做做设计"
 index_desc2: "离开世界之前，一切都只是过程"
 
+# About 
+about_title: "About"
+about_desc: "离开世界之前，一切都只是过程"
+
 # Production
 production_title: "作品集合"
 production_desc: "离开世界之前，一切都只是过程"
 
+# Resume
+resume_title: "作品集合"
+resume_desc: "离开世界之前，一切都只是过程"
 
 # Tags
 Tags: [
