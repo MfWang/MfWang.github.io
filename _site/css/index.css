@@ -1,6 +1,6 @@
-.index_banner {
+.index .banner {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   background: #000 url(../img/index_bg.jpg) no-repeat center;
   background-size: cover;
   text-align: center;
@@ -8,35 +8,30 @@
   color: #fff;
   font-size: 20px;
 }
-.index_banner_content {
+.index .banner__content {
   width: 100%;
-  height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.index_banner_title {
+.index .banner__title {
   font-size: 80px;
   margin-bottom: 50px;
 }
-.index .article__item {
-  padding: 20px 0;
-  border-bottom: 1px solid #ededed;
+.index .article {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.36);
 }
-.index .article__item:hover .article__title {
-  color: #354856;
+.index .article__item {
+  border-bottom: 1px solid #ededed;
 }
 .index .article__title {
   display: block;
   font-size: 30px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.36);
 }
-.index .article__tags span {
-  font-size: 12px;
-}
-.index .article__tags .iconfont {
+.index .article .iconfont {
   font-size: 20px;
   margin-right: 10px;
   color: rgba(0, 0, 0, 0.36);
@@ -45,12 +40,7 @@
   border: 1px solid red;
   padding: 0 10px;
   color: red;
-}
-.index .article__date {
-  color: rgba(0, 0, 0, 0.36);
-}
-.index .article__tag {
-  color: rgba(0, 0, 0, 0.36);
+  line-height: 2.5;
 }
 .index .page {
   margin-top: 20px;
@@ -132,7 +122,7 @@
   border-bottom: 1px solid #ededed;
 }
 .index .person__tags_link {
-  display: block;
+  display: inline-block;
   position: relative;
   padding: 10px 9px 10px 14px;
   margin: 10px;
@@ -165,6 +155,7 @@
   padding: 30px 0;
   border-bottom: 1px solid #ededed;
   color: rgba(0, 0, 0, 0.36);
+  line-height: 35px;
 }
 .index .person__about img {
   width: 200px;
@@ -172,13 +163,6 @@
   display: block;
   margin: 20px auto;
   border-radius: 100%;
-}
-.index .person__about p {
-  line-height: 35px;
-}
-.index .person__about .iconfont {
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.36);
 }
 .index .person__about .links {
   margin-top: 15px;

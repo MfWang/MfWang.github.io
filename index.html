@@ -2,18 +2,20 @@
 layout: default
 title: MF、Wang's blog
 className: index
+B: Block 块
+E: Element 元素
+M: Modifier 修饰符
 ---
-<div class="index_banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="indes_banner_content">
-        <h1 class="index_banner_title">{{ page.title }}</h1>
-        <h3 class="index_banner_desc">{{ site.index_desc }}</h3>
+<div class="banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="banner__content">
+        <h1 class="banner__title">{{ page.title }}</h1>
+        <h3 class="banner__desc">{{ site.index_desc }}</h3>
     </div>
 </div>
 <div class="container">
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-        <div class="article">
-            <ul class="article__list">
-                {% for post in paginator.posts %}
+        <ul class="article">
+            {% for post in paginator.posts %}
                 <li class="article__item">
                     <a class="article__title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                     <div class="row">
@@ -34,23 +36,22 @@ className: index
                         {% endif %}
                     </div>
                 </li>
-                {% endfor %}
-            </ul>
-            <div class="page">
-                {% if paginator.total_pages > 1 %}
-                    {% if paginator.previous_page %}
-                        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page_prev">
-                            <i class="iconfont icon_arrowleft"></i>NEWER POSTS
-                        </a>
-                    {% endif %}
-                    {% if paginator.next_page %}
-                        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page_next">
-                            OLDER POSTS<i class="iconfont icon_arrowright"></i>
-                        </a>
-                    {% endif %}
+            {% endfor %}
+        </ul>
+        <div class="page">
+            {% if paginator.total_pages > 1 %}
+                {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page_prev">
+                        <i class="iconfont icon_arrowleft"></i>NEWER POSTS
+                    </a>
                 {% endif %}
-                <span class="page_number iconfont" data-before="{{paginator.page}}/{{paginator.total_pages}}" onclick="javascript:scrollTo(0,0);"></span> 
-            </div>
+                {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page_next">
+                        OLDER POSTS<i class="iconfont icon_arrowright"></i>
+                    </a>
+                {% endif %}
+            {% endif %}
+            <span class="page_number iconfont" data-before="{{paginator.page}}/{{paginator.total_pages}}" onclick="javascript:scrollTo(0,0);"></span> 
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">

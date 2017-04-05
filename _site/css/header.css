@@ -35,4 +35,13 @@ header .header__link:hover, header .header__link:focus {
   color: #ba7700;
 }
 
+.navbar-mfw {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 2;
+}
+
 /*# sourceMappingURL=header.css.map */
