@@ -7,14 +7,7 @@ header {
   left: 0;
   z-index: 2;
 }
-
-.header__content {
-  width: 1060px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-}
-.header__link {
+header .header__link {
   font-size: 20px;
   line-height: 50px;
   color: #fff;
@@ -24,7 +17,7 @@ header {
   position: relative;
   transition: color 0.3s;
 }
-.header__link:before {
+header .header__link:before {
   position: absolute;
   top: 30px;
   left: 50%;
@@ -34,11 +27,11 @@ header {
   font-size: 1.2em;
   transition: text-shadow 0.3s, color 0.3s;
 }
-.header__link:hover:before, .header__link:focus:before {
+header .header__link:hover:before, header .header__link:focus:before {
   color: #fff;
   text-shadow: 10px 0 #fff, -10px 0 #fff;
 }
-.header__link:hover, .header__link:focus {
+header .header__link:hover, header .header__link:focus {
   color: #ba7700;
 }
 

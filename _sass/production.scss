@@ -1,16 +1,31 @@
-.projects{
-    &{
-        width: 1060px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        padding-top: 50px;
+.production{
+    &_banner{
+        height: 100vh;
+        background: #000 url(../img/index_bg.jpg) no-repeat center;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+        &__content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+        &_title{
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
+        &_desc{
+            font-size: 20px;
+        }
     }
     &_item{
-        width: 500px;
         border-radius: 3px;
         border: 1px solid #edeeee;
-        margin: 0 20px 20px 0;
+        margin-bottom: 20px;
         &:hover{
             box-shadow: 5px 5px 5px #ededed;
         }
@@ -36,6 +51,7 @@
             color: rgba(0,0,0,0.36);
             padding: 10px 0;
             border-bottom: 1px solid #edeeee;
+            height: 60px;
         }
         &_bottom{
             display: flex;

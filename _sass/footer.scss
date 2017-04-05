@@ -1,18 +1,12 @@
 footer{
-    width: 100%;
-    background: #fff;
-    padding: 50px 0;
     border-top: 1px solid #ededed;
-    margin: 50px 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.footer_link{
-    display: block;
+    padding: 50px 0 65px;
 }
 .footer_link .iconfont{
-    font-size: 60px;
+    font-size: 50px;
     color: #000;
     margin: 0 10px;
 }

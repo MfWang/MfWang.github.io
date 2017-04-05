@@ -2,29 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <title>JS给动态生成的元素绑定事件</title>
     <link rel="stylesheet" href="/css/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="/js/jquery-3.2.0.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body class="">
-    <div class="site">
-        <header>
-    <div class="header__content">
-        
-            <a class="header__link" href="/"> Home</a>
-        
-            <a class="header__link" href="/about.html"> About</a>
-        
-            <a class="header__link" href="/production.html"> Production</a>
-        
-            <a class="header__link" href="/resume.html"> Resume</a>
-        
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">MF、W</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">MF、W</a>
     </div>
-</header>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+          <li>
+            <a class="header__link" href="/"> Home</a>
+          </li>
+        
+          <li>
+            <a class="header__link" href="/about.html"> About</a>
+          </li>
+        
+          <li>
+            <a class="header__link" href="/production.html"> Production</a>
+          </li>
+        
+          <li>
+            <a class="header__link" href="/resume.html"> Resume</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
 
-        <div class="post_banner">
+    <div class="post_banner">
     <div class="post_tags">
         
             <span class="post_tag_item"> webpack react</span>
@@ -67,26 +99,27 @@
 </div>
 
 
+    
+    <footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="container">
         
-        <footer>
-    
-        <a href="http://weibo.com/wmf755314203" target="_blank" class="footer_link">
-            <i class="iconfont icon_sina"></i>
-        </a>
-    
-        <a href="https://www.zhihu.com/people/MFWang_/activities" target="_blank" class="footer_link">
-            <i class="iconfont icon_zhihu"></i>
-        </a>
-    
-        <a href="http://www.jianshu.com/u/5ebd924cd5dc" target="_blank" class="footer_link">
-            <i class="iconfont icon_jianshu"></i>
-        </a>
-    
-        <a href="https://github.com/MfWang" target="_blank" class="footer_link">
-            <i class="iconfont icon_github"></i>
-        </a>
-    
-</footer>
+            <a href="http://weibo.com/wmf755314203" target="_blank" class="footer_link">
+                <i class="iconfont icon_sina"></i>
+            </a>
+        
+            <a href="https://www.zhihu.com/people/MFWang_/activities" target="_blank" class="footer_link">
+                <i class="iconfont icon_zhihu"></i>
+            </a>
+        
+            <a href="http://www.jianshu.com/u/5ebd924cd5dc" target="_blank" class="footer_link">
+                <i class="iconfont icon_jianshu"></i>
+            </a>
+        
+            <a href="https://github.com/MfWang" target="_blank" class="footer_link">
+                <i class="iconfont icon_github"></i>
+            </a>
+        
     </div>
+</footer>
 </body>
 </html>
