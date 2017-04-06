@@ -25,26 +25,27 @@
         color: rgba(0,0,0,0.36);
         &__item{
             border-bottom: 1px solid #ededed;
+            padding: 10px 0;
+            &:hover {
+                .article__title{
+                    color: #337ab7;
+                }
+            }
         }
         &__title{
             display: block;
             font-size: 30px;
             font-weight: 500;
+            margin-bottom: 10px;
         }
         .iconfont{
             font-size: 20px;
             margin-right: 10px;
             color: rgba(0,0,0,0.36);
         }
-        &__project{
-            border: 1px solid red;
-            padding: 0 10px;
-            color: red;
-            line-height: 2.5;
-        }
     }
     .page{
-        margin-top: 20px;
+        margin: 20px 0;
         height: 60px;
         .iconfont{
             font-size: 20px;
@@ -52,22 +53,18 @@
             margin: 0 10px 0 0;
         }
         &_prev{
-            width: 200px;
             height: 60px;
             border: 1px solid #ededed;
             display: block;
             text-align: center;
             line-height: 60px;
             transition: all 0.3s ease-in-out;
-            float: left;
             &:hover{
                 background: #006fc4;
                 color: #fff;
             }
         }
         &_next{
-            float: right;
-            width: 200px;
             height: 60px;
             border: 1px solid #ededed;
             display: block;
@@ -96,9 +93,10 @@
             border-radius: 100%;
             position: fixed;
             bottom: 190px;
-            right: 310px;
+            right: 0;
             transition: all .3s;
             cursor: pointer;
+            z-index: 3;
             &:before{
                 content: attr(data-before);
             }
@@ -165,20 +163,17 @@
                 margin: 20px auto;
                 border-radius: 100%;
             }
-            .links{
+            &__link{
                 margin-top: 15px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-            }
-            &_link{
-                margin-right: 10px;
+                &__item{
+                    margin-right: 10px;
+                }
             }
             .iconfont{
-                color: rgba(0,0,0,0.36);
-                &:hover{
-                    color: #189df7;
-                }
+                font-size: 32px;
             }
         }
         &__friends{
@@ -192,5 +187,8 @@
                 margin: 5px 10px;
             }
         }
+    }
+    .col-xs-12 .person__about, .col-sm-12 .person__about{
+        display: none;
     }
 }

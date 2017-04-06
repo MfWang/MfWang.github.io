@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <title>jquery ajax 跨域</title>
-    <link rel="stylesheet" href="/css/main.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -19,6 +18,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body class="">
     <nav class="navbar navbar-default navbar-mfw">
@@ -56,18 +56,19 @@
   </div>
 </nav>
 
-    <div class="post_banner">
-    <div class="post_tags">
+    <div class="banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="banner_tag">
         
-            <span class="post_tag_item"> webpack react</span>
+            <span class="banner_tag_item"> webpack react</span>
         
     </div>
-    <h1 class="post_banner_title">jquery ajax 跨域</h1>
-    <h3 class="post_banner_time">Post By   [ 2016-10-17 00:00:00 +0800 ]</h3>
+    <h1 class="banner_title">jquery ajax 跨域</h1>
+    <h3 class="banner_time">Post By   [ 2016-10-17 00:00:00 +0800 ]</h3>
 </div>
-<div class="post_content">
-    <article>
-        <p><a href="http://www.cnblogs.com/sunxucool/p/3430914.html">jquery ajax 跨域</a></p>
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <article>
+            <p><a href="http://www.cnblogs.com/sunxucool/p/3430914.html">jquery ajax 跨域</a></p>
 
 <p>客户端“跨域访问”一直是一个头疼的问题，好在有jQuery帮忙，从jQuery-1.2以后跨域问题便迎刃而解。由于自己在项目中遇到跨域问题，借此机会对跨域问题来刨根问底，查阅了相关资料和自己的实践，算是解决了跨域问题。便记录下来，以供查阅。</p>
 
@@ -136,12 +137,16 @@
 <p> 这是因为虽然采用post +动态生成iframe是可以达到post跨域的目的(有位js牛人就是这样把jquery1.2.5 打patch的)，但这样做是一个比较极端的方式，不建议采用。也可以说get方式的跨域是合法的，post方式从安全角度上被认为是不合法的，万不得已 还是不要post，client端跨域访问的需求看来也引起w3c的注意了，看资料说html5 WebSocket标准支持跨域的数据交换，应该也是一个将来可选的跨域数据交换的解决方案。</p>
 
 
-    </article>
-    <sidebar>
-        
-    </sidebar>
+        </article>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <sidebar>
+            
+        </sidebar>
+    </div>
      <i class="iconfont icon_arrowtop" onclick="javascript:scrollTo(0,0);"></i> 
 </div>
+
 
 
     

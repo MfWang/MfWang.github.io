@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <title>css中一个div中放置两个50%的span，会被挤下来</title>
-    <link rel="stylesheet" href="/css/main.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -19,6 +18,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body class="">
     <nav class="navbar navbar-default navbar-mfw">
@@ -56,18 +56,19 @@
   </div>
 </nav>
 
-    <div class="post_banner">
-    <div class="post_tags">
+    <div class="banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="banner_tag">
         
-            <span class="post_tag_item"> webpack react</span>
+            <span class="banner_tag_item"> webpack react</span>
         
     </div>
-    <h1 class="post_banner_title">css中一个div中放置两个50%的span，会被挤下来</h1>
-    <h3 class="post_banner_time">Post By   [ 2016-10-17 00:00:00 +0800 ]</h3>
+    <h1 class="banner_title">css中一个div中放置两个50%的span，会被挤下来</h1>
+    <h3 class="banner_time">Post By   [ 2016-10-17 00:00:00 +0800 ]</h3>
 </div>
-<div class="post_content">
-    <article>
-        <div class="highlighter-rouge"><pre class="highlight"><code>&lt;section class="nav"&gt; 
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <article>
+            <div class="highlighter-rouge"><pre class="highlight"><code>&lt;section class="nav"&gt; 
     &lt;span class="active"&gt;精品应用 &lt;em&gt;&lt;/em&gt;&lt;/span&gt;
     &lt;span&gt;我的应用 &lt;em&gt;&lt;/em&gt;&lt;/span&gt;
 &lt;/section&gt;
@@ -86,12 +87,16 @@
 
 <p>⑤使用flex</p>
 
-    </article>
-    <sidebar>
-        
-    </sidebar>
+        </article>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <sidebar>
+            
+        </sidebar>
+    </div>
      <i class="iconfont icon_arrowtop" onclick="javascript:scrollTo(0,0);"></i> 
 </div>
+
 
 
     

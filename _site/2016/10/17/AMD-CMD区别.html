@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <title>AMD与CMD区别</title>
-    <link rel="stylesheet" href="/css/main.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -19,6 +18,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body class="">
     <nav class="navbar navbar-default navbar-mfw">
@@ -56,18 +56,19 @@
   </div>
 </nav>
 
-    <div class="post_banner">
-    <div class="post_tags">
+    <div class="banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="banner_tag">
         
-            <span class="post_tag_item"> AMD  CMD</span>
+            <span class="banner_tag_item"> AMD  CMD</span>
         
     </div>
-    <h1 class="post_banner_title">AMD与CMD区别</h1>
-    <h3 class="post_banner_time">Post By   [ 2016-10-17 00:00:00 +0800 ]</h3>
+    <h1 class="banner_title">AMD与CMD区别</h1>
+    <h3 class="banner_time">Post By   [ 2016-10-17 00:00:00 +0800 ]</h3>
 </div>
-<div class="post_content">
-    <article>
-        <h1 id="区别">区别：</h1>
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <article>
+            <h1 id="区别">区别：</h1>
 
 <ul>
   <li>对于依赖的模块，AMD 是<strong>提前执行</strong>，CMD 是<strong>延迟执行</strong>。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.</li>
@@ -105,12 +106,16 @@
   </li>
 </ul>
 
-    </article>
-    <sidebar>
-        
-    </sidebar>
+        </article>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <sidebar>
+            
+        </sidebar>
+    </div>
      <i class="iconfont icon_arrowtop" onclick="javascript:scrollTo(0,0);"></i> 
 </div>
+
 
 
     

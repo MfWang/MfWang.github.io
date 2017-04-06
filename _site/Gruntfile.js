@@ -22,6 +22,12 @@ module.exports = function(grunt) {
                     ext:'.css'
                 }]
             }
+        },
+        watch:{
+            start:{
+                files: ['_sass/*.scss'],
+                tasks: ["sass"]
+            }
         }
 
         //注解：
@@ -32,6 +38,7 @@ module.exports = function(grunt) {
     });
     // 加载任务插件
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
 
     // 默认被执行的任务列表。

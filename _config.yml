@@ -191,3 +191,57 @@ Productions: [
     link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html"
   }
 ]
+
+# Resume
+Resume_productions: [
+  {
+    name: '名字',
+    desc: '技术',
+    type: 'PC'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: 'PC'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: 'PC'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: '移动端'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: '移动端'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: '移动端'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: '响应式'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: '响应式'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: '响应式'
+  },
+  {
+    name: '名字',
+    desc: '技术',
+    type: '响应式'
+  }
+]

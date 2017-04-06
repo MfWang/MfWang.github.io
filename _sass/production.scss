@@ -58,30 +58,28 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            margin: 20px;
+            margin: 10px 20px;
         }
-        &_tags{
-            &{
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-            }
+        &_tag{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             &_item{
                 color: rgba(0,0,0,0.36);
-                font-size: 26px;
-                margin-right: 15px;
-                &_link2{
-                    border: 1px solid #edeeee;
-                    padding: 0 20px;
-                    height: 50px;
-                    text-align: center;
-                    line-height: 50px;
-                    color: #edeeee;
-                    &:hover{
-                        color: #354856;
-                        border: 1px solid #354856;
-                    }
-                }
+                font-size: 22px;
+                margin-right: 5px;
+            }
+        }
+        &_link_resource{
+            border: 1px solid #edeeee;
+            padding: 0 20px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: #edeeee;
+            &:hover{
+                color: #354856;
+                border: 1px solid #354856;
             }
         }
     }

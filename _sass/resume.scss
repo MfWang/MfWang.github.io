@@ -48,6 +48,7 @@
     &__page2{
         background: linear-gradient(to bottom, #6f7275 0%, #31353a 100%);
         text-align: center;
+        padding: 30px 0;
         &__title{
             color: #fff
         }
@@ -118,7 +119,7 @@
                 width: 200px;
                 height: 200px;
                 background: rgba(0,0,0,0.3);
-                margin: 10px;
+                margin: 10px auto;
                 transition: all 0.5s;
                 :hover{
                     transform: scale(1.3);
@@ -129,13 +130,19 @@
     &__page4{
         background: #F4D03F;
         padding: 30px 0;
+        img{
+            width: 100%;
+        }
         &__skill{
-            width: 478px;
+            &__item{
+                margin-bottom: 20px;
+            }
         }
     }
     &__page5{
         padding: 30px 0;
         background: linear-gradient(to bottom, #6f7275 0%, #31353a 100%);
+        color: #aaa;
         &__item{
             text-align: center;
             .iconfont{
@@ -159,9 +166,8 @@
             margin-bottom: 20px;
         }
         &__production{
-            &__item{
-                width: 25%;
-                &:hover .resume__page6__production__img{
+            &__item:hover {
+                .resume__page6__production__img{
                     border: 4px solid #F4D03F;
                 }
             }
@@ -184,7 +190,6 @@
     }
     &__page7{
         &{
-            height: 500px;
             background: url(/img/resume__page7.jpg);
             background-size: cover;
             background-attachment: fixed;
@@ -192,7 +197,7 @@
         }
         &__slide{
             margin-top: 20px;
-            height: 300px;
+            height: 200px;
             color: #fff;
         }
         &__title{

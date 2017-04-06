@@ -1,15 +1,10 @@
 footer{
     border-top: 1px solid #ededed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0 65px;
-}
-.footer_link .iconfont{
-    font-size: 50px;
-    color: #000;
-    margin: 0 10px;
-}
-.footer_link .iconfont:hover{
-    color: #189df7;
+    text-align: center;
+    padding: 50px 0;
+    .iconfont{
+        font-size: 50px;
+        color: #000;
+        margin: 0 10px;
+    }
 }

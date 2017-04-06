@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <title>Grunt安装与环境配置</title>
-    <link rel="stylesheet" href="/css/main.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -19,6 +18,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body class="">
     <nav class="navbar navbar-default navbar-mfw">
@@ -56,18 +56,19 @@
   </div>
 </nav>
 
-    <div class="post_banner">
-    <div class="post_tags">
+    <div class="banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="banner_tag">
         
-            <span class="post_tag_item"> webpack react</span>
+            <span class="banner_tag_item"> webpack react</span>
         
     </div>
-    <h1 class="post_banner_title">Grunt安装与环境配置</h1>
-    <h3 class="post_banner_time">Post By   [ 2016-12-22 00:00:00 +0800 ]</h3>
+    <h1 class="banner_title">Grunt安装与环境配置</h1>
+    <h3 class="banner_time">Post By   [ 2016-12-22 00:00:00 +0800 ]</h3>
 </div>
-<div class="post_content">
-    <article>
-        <p><code class="highlighter-rouge">Grunt 依赖 Node.js 所以在安装之前确保你安装了 Node.js。然后开始安装 Grunt</code>
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <article>
+            <p><code class="highlighter-rouge">Grunt 依赖 Node.js 所以在安装之前确保你安装了 Node.js。然后开始安装 Grunt</code>
 <code class="highlighter-rouge">实际上，安装的并不是 Grunt，而是 Grunt-cli，也就是命令行的 Grunt，这样你就可以使用 grunt 命令来执行某个项目中的 Gruntfile.js 中定义的 task 。但是要注意，Grunt-cli 只是一个命令行工具，用来执行，而不是 Grunt 这个工具本身</code></p>
 <blockquote>
   <p>项目的github地址：<a href="https://github.com/AveSore/grunt_test">grunt_test</a></p>
@@ -212,12 +213,16 @@ dest: ‘build/static/js/common.js’，并且不写ext就可以</p>
   <p>详细代码放在github上面了，链接地址：<a href="https://github.com/AveSore/grunt_test">grunt_test</a></p>
 </blockquote>
 
-    </article>
-    <sidebar>
-        
-    </sidebar>
+        </article>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <sidebar>
+            
+        </sidebar>
+    </div>
      <i class="iconfont icon_arrowtop" onclick="javascript:scrollTo(0,0);"></i> 
 </div>
+
 
 
     

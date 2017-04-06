@@ -25,25 +25,24 @@
 }
 .index .article__item {
   border-bottom: 1px solid #ededed;
+  padding: 10px 0;
+}
+.index .article__item:hover .article__title {
+  color: #337ab7;
 }
 .index .article__title {
   display: block;
   font-size: 30px;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 .index .article .iconfont {
   font-size: 20px;
   margin-right: 10px;
   color: rgba(0, 0, 0, 0.36);
 }
-.index .article__project {
-  border: 1px solid red;
-  padding: 0 10px;
-  color: red;
-  line-height: 2.5;
-}
 .index .page {
-  margin-top: 20px;
+  margin: 20px 0;
   height: 60px;
 }
 .index .page .iconfont {
@@ -52,22 +51,18 @@
   margin: 0 10px 0 0;
 }
 .index .page_prev {
-  width: 200px;
   height: 60px;
   border: 1px solid #ededed;
   display: block;
   text-align: center;
   line-height: 60px;
   transition: all 0.3s ease-in-out;
-  float: left;
 }
 .index .page_prev:hover {
   background: #006fc4;
   color: #fff;
 }
 .index .page_next {
-  float: right;
-  width: 200px;
   height: 60px;
   border: 1px solid #ededed;
   display: block;
@@ -96,9 +91,10 @@
   border-radius: 100%;
   position: fixed;
   bottom: 190px;
-  right: 310px;
+  right: 0;
   transition: all .3s;
   cursor: pointer;
+  z-index: 3;
 }
 .index .page_number:before {
   content: attr(data-before);
@@ -164,20 +160,17 @@
   margin: 20px auto;
   border-radius: 100%;
 }
-.index .person__about .links {
+.index .person__about__link {
   margin-top: 15px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.index .person__about_link {
+.index .person__about__link__item {
   margin-right: 10px;
 }
 .index .person__about .iconfont {
-  color: rgba(0, 0, 0, 0.36);
-}
-.index .person__about .iconfont:hover {
-  color: #189df7;
+  font-size: 32px;
 }
 .index .person__friends {
   padding: 30px 0;
@@ -189,6 +182,9 @@
   color: rgba(0, 0, 0, 0.36);
   transition: color 0.3s;
   margin: 5px 10px;
+}
+.index .col-xs-12 .person__about, .index .col-sm-12 .person__about {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

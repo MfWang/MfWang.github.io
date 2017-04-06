@@ -1,19 +1,12 @@
 footer {
   border-top: 1px solid #ededed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0 65px;
+  text-align: center;
+  padding: 50px 0;
 }
-
-.footer_link .iconfont {
+footer .iconfont {
   font-size: 50px;
   color: #000;
   margin: 0 10px;
-}
-
-.footer_link .iconfont:hover {
-  color: #189df7;
 }
 
 /*# sourceMappingURL=footer.css.map */
