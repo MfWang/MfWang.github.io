@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<body class="{{ page.className }}">
+<body class="{% if page.className %}{{ page.className }} {% else %}post{% endif %}">
     {% include header.html %}
 
     {{ content }}

@@ -183,8 +183,5 @@
   transition: color 0.3s;
   margin: 5px 10px;
 }
-.index .col-xs-12 .person__about, .index .col-sm-12 .person__about {
-  display: none;
-}
 
 /*# sourceMappingURL=index.css.map */

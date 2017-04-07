@@ -96,8 +96,5 @@
   transition: color 0.3s;
   margin: 5px 10px;
 }
-.about .col-xs-12 .person__about, .about .col-sm-12 .person__about {
-  display: none;
-}
 
 /*# sourceMappingURL=about.css.map */

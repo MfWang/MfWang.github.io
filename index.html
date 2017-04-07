@@ -6,7 +6,7 @@ B: Block 块
 E: Element 元素
 M: Modifier 修饰符
 ---
-<div class="banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="banner container-fluid">
     <div class="banner__content">
         <h1 class="banner__title">{{ page.title }}</h1>
         <h3 class="banner__desc">{{ site.index_desc }}</h3>
@@ -68,7 +68,7 @@ M: Modifier 修饰符
                     {% endfor %}
                 </div>
             </div>
-            <div class="person__about">
+            <div class="person__about visible-md-block visible-lg-block">
                 <p class="title">ABOUT ME</p>
                 <img src="/img/head.jpeg" alt="">
                 <p>{{ site.index_desc }}</p>

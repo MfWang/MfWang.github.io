@@ -45,4 +45,15 @@ header{
     width: 100%;
     background: transparent;
     z-index: 2;
+    border: none;
+    box-shadow: none;
+    .navbar-brand{
+            color: #ba7700;
+    }
+    .navbar-nav>li>a{
+        color: #fff;
+        &:hover{
+            color: #ba7700;
+        }
+    }
 }
