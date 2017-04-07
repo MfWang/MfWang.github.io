@@ -35,12 +35,14 @@
   height: 50px;
   line-height: 50px;
   padding: 0 20px;
+  border-bottom: 1px solid #edeeee;
 }
 .production_item_date {
   color: rgba(0, 0, 0, 0.36);
 }
 .production_item_link {
   display: block;
+  border-bottom: 1px solid #edeeee;
 }
 .production_item_img {
   width: 100%;
@@ -51,7 +53,6 @@
   color: rgba(0, 0, 0, 0.36);
   padding: 10px 0;
   border-bottom: 1px solid #edeeee;
-  height: 60px;
 }
 .production_item_bottom {
   display: flex;

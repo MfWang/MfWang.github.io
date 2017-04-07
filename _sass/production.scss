@@ -35,12 +35,14 @@
             height: 50px;
             line-height: 50px;
             padding: 0 20px;
+            border-bottom: 1px solid #edeeee;
         }
         &_date{
             color: rgba(0,0,0,0.36);
         }
         &_link{
             display: block;
+            border-bottom: 1px solid #edeeee;
         }
         &_img{
             width: 100%;
@@ -51,7 +53,6 @@
             color: rgba(0,0,0,0.36);
             padding: 10px 0;
             border-bottom: 1px solid #edeeee;
-            height: 60px;
         }
         &_bottom{
             display: flex;

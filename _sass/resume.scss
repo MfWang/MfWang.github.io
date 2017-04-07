@@ -44,6 +44,36 @@
             font-size: 20px;
             margin-bottom: 50px;
         }
+        &__next{
+            width: 70px;
+            height: 70px;
+            margin-top: 45px;
+            border: 2px solid rgba(255,255,255,.2);
+            border-radius: 100%;
+            background: 0 0;
+            transition: background .3s ease-in-out;
+            display: block;
+            margin: 0 auto;
+            .iconfont{
+                font-size: 20px;
+                color: #F4D03F;
+                text-align: center;
+                line-height: 70px;
+            }
+            &:hover{
+                outline: 0;
+                color: #F4D03F;
+                background: rgba(255,255,255,.1);
+                .iconfont {
+                    animation: pulse 1.5s linear infinite;
+                }
+            }
+        }
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.2);}
+            100% {transform: scale(1);}
+        }
     }
     &__page2{
         background: linear-gradient(to bottom, #6f7275 0%, #31353a 100%);
@@ -79,13 +109,8 @@
         }
     }
     &__page3{
-        &{
-            background: linear-gradient(to bottom, #ffffff 0%, #cccccc 100%);
-            padding: 80px 0;
-        }
-        &__content{
-            text-align: center;
-        }
+        background: linear-gradient(to bottom, #ffffff 0%, #cccccc 100%);
+        padding: 80px 0;
         &__desc{
             color: #000;
         }
@@ -136,6 +161,24 @@
         &__skill{
             &__item{
                 margin-bottom: 20px;
+                h4{
+                    position: relative;
+                    padding-left: 40px;
+                    margin-bottom: 15px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+                p{
+                    padding-left: 40px;
+                }
+                .iconfont{
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    color: #fff;
+                    font-size: 30px;
+                    transform: translateY(-50%);
+                }
             }
         }
     }
@@ -145,12 +188,16 @@
         color: #aaa;
         &__item{
             text-align: center;
-            .iconfont{
+            i{
                 font-size: 50px;
                 display: block;
-                margin: 0 auto 30px auto;
-                line-height: 120px;
                 color: #F4D03F;
+            }
+            &__title{
+                font-size: 36px;
+                font-weight: 700;
+                color: #fff;
+                margin-top: 10px;
             }
             &__desc{
                 color: #aaa;
@@ -195,29 +242,29 @@
             background-attachment: fixed;
             padding: 80px 0;
         }
-        &__slide{
+        &__slide{ 
             margin-top: 20px;
             height: 200px;
             color: #fff;
+            &__item{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 40px;
+                height: 300px;
+                position: relative;
+                color: #ddd;
+                p{
+                    text-align: center;
+                    width: 100%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
         }
         &__title{
             color: #fff;
-        }
-        &__item{
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 40px;
-            height: 300px;
-            position: relative;
-            color: #ddd;
-            p{
-                text-align: center;
-                width: 100%;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
         }
         .owl-controls{
             margin-top: 10px;

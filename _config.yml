@@ -168,7 +168,6 @@ Productions: [
   {
     name: "Graphical",
     date: "2016.08",
-    img: "",
     summary: "纯CSS绘制图形",
     tag: ['css'],
     link: "https://github.com/MfWang/Production/blob/master/Graphical/graphical.html"
@@ -176,7 +175,6 @@ Productions: [
   {
     name: "Button",
     date: "2016.10",
-    img: "",
     summary: "Button样式集合",
     tag: ['css'],
     link: "https://github.com/MfWang/Production/blob/master/button/button.html"
@@ -184,7 +182,6 @@ Productions: [
   {
     name: "Loading",
     date: "2016.11",
-    img: "",
     summary: "",
     tag: ['css'],
     link: "https://github.com/MfWang/Production/blob/master/Loading/loading.html"
@@ -192,8 +189,21 @@ Productions: [
   {
     name: "PhoneMenu",
     date: "2017.03",
-    img: "",
     summary: "",
+    tag: ['css','respone'],
+    link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html"
+  },
+  {
+    name: "FullScreenAsteroid",
+    date: "2016.03",
+    summary: "满屏的小行星乱撞",
+    tag: ['css','respone'],
+    link: "https://github.com/MfWang/FullScreenAsteroid/blob/master/gaojidonghua-asteroids.html"
+  },
+  {
+    name: "EscapePlanet",
+    date: "2016.03",
+    summary: "躲避小行星",
     tag: ['css','respone'],
     link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html"
   }
@@ -247,25 +257,25 @@ Resume_page3: [
 Resume_page6: [
   {
     name: "湖州师范学院",
-    img: "",
+    img: "page6_hz.jpg",
     job: "计算机科学与技术",
     desc: "主要学习编程语言，前端技术，网站制作和开发，大学期间做过很多项目，很喜欢编程"
   },
   {
     name: "湖州银硕软件科技有限公司",
-    img: "",
+    img: "page6_hzyinshuo.jpg",
     job: "实习生",
     desc: "主要学习编程语言，前端技术，网站制作和开发，大学期间做过很多项目，很喜欢编程"
   },
   {
     name: "杭州车猫网络科技有限公司",
-    img: "",
+    img: "page6_chemao.jpg",
     job: "前端工程师",
     desc: "工作时间：2015.06-2016.07，主要从事二手车行业的网站开发，包括金融管理系统，电商网站，移动端商城等等"
   },
   {
     name: "杭州棒米科技网络公司",
-    img: "",
+    img: "page6_bongmi.jpg",
     job: "前端工程师",
     desc: "工作时间：2016.08-至今，公司致力于用智能硬件+移动互联网+大数据模式，采集人体健康大数据，为人体制定个性化健康解决方案。工作内容是负责PC和移动端的官网开发及维护，以及后台数据平台的开发"
   }

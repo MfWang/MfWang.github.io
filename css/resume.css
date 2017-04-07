@@ -44,6 +44,42 @@
   font-size: 20px;
   margin-bottom: 50px;
 }
+.resume__page1__next {
+  width: 70px;
+  height: 70px;
+  margin-top: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  background: 0 0;
+  transition: background .3s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+.resume__page1__next .iconfont {
+  font-size: 20px;
+  color: #F4D03F;
+  text-align: center;
+  line-height: 70px;
+}
+.resume__page1__next:hover {
+  outline: 0;
+  color: #F4D03F;
+  background: rgba(255, 255, 255, 0.1);
+}
+.resume__page1__next:hover .iconfont {
+  animation: pulse 1.5s linear infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .resume__page2 {
   background: linear-gradient(to bottom, #6f7275 0%, #31353a 100%);
   text-align: center;
@@ -78,9 +114,6 @@
 .resume__page3 {
   background: linear-gradient(to bottom, #ffffff 0%, #cccccc 100%);
   padding: 80px 0;
-}
-.resume__page3__content {
-  text-align: center;
 }
 .resume__page3__desc {
   color: #000;
@@ -128,6 +161,24 @@
 .resume__page4__skill__item {
   margin-bottom: 20px;
 }
+.resume__page4__skill__item h4 {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  height: 30px;
+  line-height: 30px;
+}
+.resume__page4__skill__item p {
+  padding-left: 40px;
+}
+.resume__page4__skill__item .iconfont {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: #fff;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
 .resume__page5 {
   padding: 30px 0;
   background: linear-gradient(to bottom, #6f7275 0%, #31353a 100%);
@@ -136,12 +187,16 @@
 .resume__page5__item {
   text-align: center;
 }
-.resume__page5__item .iconfont {
+.resume__page5__item i {
   font-size: 50px;
   display: block;
-  margin: 0 auto 30px auto;
-  line-height: 120px;
   color: #F4D03F;
+}
+.resume__page5__item__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 10px;
 }
 .resume__page5__item__desc {
   color: #aaa;
@@ -184,10 +239,7 @@
   height: 200px;
   color: #fff;
 }
-.resume__page7__title {
-  color: #fff;
-}
-.resume__page7__item {
+.resume__page7__slide__item {
   font-weight: 500;
   font-size: 20px;
   line-height: 40px;
@@ -195,13 +247,16 @@
   position: relative;
   color: #ddd;
 }
-.resume__page7__item p {
+.resume__page7__slide__item p {
   text-align: center;
   width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.resume__page7__title {
+  color: #fff;
 }
 .resume__page7 .owl-controls {
   margin-top: 10px;

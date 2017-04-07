@@ -1,20 +1,27 @@
 $fonts: (
-  ("twitter", "\e71f"),
-  ("github", "\e735"),
-  ("zhihu", "\e62c"),
+  ("sina", "\e628"),
   ("jianshu", "\e644"),
-  ("facebook", "\e507"),
-  ("sina", "\e62e"),
-  ("wechat", "\e64c"),
-  ("qq", "\e616"),
-  ("tag2", "\e62b"),
-  ("date", "\e619"),
-  ("tag", "\e905"),
-  ("category", "\e640"),
-  ("arrowleft", "\e501"),
-  ("arrowright", "\e614"),
+  ("github", "\e61c"),
+  ("zhihu", "\e61b"),
+  ("html", "\e610"),
+  ("css", "\e6d6"),
+  ("js", "\e60a"),
+  ("trophy", "\e88d"),
+  ("code", "\e602"),
+  ("arrowdown", "\e618"),
   ("arrowtop", "\e649"),
+  ("check", "\e63f"),
+  ("mac", "\e611"),
+  ("mobile", "\e638"),
+  ("response", "\e613"),
+  ("date", "\e61f"),
+  ("tag", "\e62b"),
+  ("arrowleft", "\e83d"),
+  ("arrowright", "\e83e"),
+  ("smile", "\e71b")
+
 );
+
 @font-face {font-family: "iconfont";
     src: url('../fonts/iconfont.eot'); /* IE9*/
     src: url('../fonts/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */

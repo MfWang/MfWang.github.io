@@ -4,30 +4,34 @@ title: 作品集合 | MF、W's blog
 desc: production_desc
 className: production
 ---
-<div class="production_banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="production_banner__content">
-        <h1 class="production_banner_title">{{ site.production_title }}</h1>
-        <h3 class="production_banner_desc">{{ site.production_desc }}</h3>
+<div class="production_banner">
+    <div class="container">
+        <div class="row">
+            <div class="production_banner__content">
+                <h1 class="production_banner_title">{{ site.production_title }}</h1>
+                <h3 class="production_banner_desc">{{ site.production_desc }}</h3>
+            </div>
+        </div>
     </div>
 </div>
 <div class="container">
-    <div class="row">
+    <div class="row" id="masonry">
         {% for production in site.Productions %}
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
                 <div class="production_item">
                     <div class="production_item_top">
                         <p class="production_item_name">{{ production.name }}</p>
                         <p class="production_item_date">{{ production.date }}</p>
                     </div>
                     <a href="{{ site.github_template_link }}{{ production.link }}" target="_blank" class="production_item_link">
-                        <img src="/img/index_bg.jpg" alt="" class="production_item_img">
+                        <img src="/img/production/{{ production.name }}.png" alt="" class="production_item_img">
                     </a>
                     <p class="production_item_desc">{{ production.summary }}</p>
                     <div class="production_item_bottom">
                         <div class="production_item_tag">
-                            <i class="iconfont icon_qq production_item_tag_item"></i>
-                            <i class="iconfont icon_wechat production_item_tag_item"></i>
-                            <i class="iconfont icon_facebook production_item_tag_item"></i>
+                            {% for icon in production.tag %}
+                            <i class="iconfont icon_{{ icon }} production_item_tag_item"></i>
+                            {% endfor %}
                         </div>
                         <a href="{{ production.link }}" target="_blank" class="production_item_link_resource">TO Resource</a>
                     </div>
@@ -36,3 +40,14 @@ className: production
         {% endfor %}
     </div>
 </div>
+
+<script src="/js/masonry.min.js"></script>
+<script>
+    $(function() {
+        var $container = $('#masonry');
+        $container.masonry({
+            itemSelector: '.box',
+            isAnimated: true,
+        });
+    });
+</script>
