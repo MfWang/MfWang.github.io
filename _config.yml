@@ -173,11 +173,11 @@ Productions: [
     link: "https://github.com/MfWang/Production/blob/master/Graphical/graphical.html"
   },
   {
-    name: "Button",
+    name: "Navigation",
     date: "2016.10",
     summary: "Button样式集合",
     tag: ['css'],
-    link: "https://github.com/MfWang/Production/blob/master/button/button.html"
+    link: "https://github.com/MfWang/Production/blob/master/Navigation/navigation.html"
   },
   {
     name: "Loading",

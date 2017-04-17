@@ -1,5 +1,5 @@
 .production{
-    &_banner{
+    &__banner{
         height: 100vh;
         background: #000 url(../img/index_bg.jpg) no-repeat center;
         background-size: cover;
@@ -14,11 +14,11 @@
             color: #fff;
             text-align: center;
         }
-        &_title{
+        &__title{
             font-size: 80px;
             margin-bottom: 30px;
         }
-        &_desc{
+        &__desc{
             font-size: 20px;
         }
     }
