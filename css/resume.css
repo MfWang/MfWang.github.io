@@ -144,12 +144,43 @@
 .resume__page3__production__item {
   width: 200px;
   height: 200px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   margin: 10px auto;
   transition: all 0.5s;
+  position: relative;
 }
-.resume__page3__production__item :hover {
-  transform: scale(1.3);
+.resume__page3__production__item:hover .resume__page3__production__content {
+  opacity: 1;
+}
+.resume__page3__production__item:hover .resume__page3__production__mask {
+  opacity: 1;
+}
+.resume__page3__production__content {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: all 0.5s;
+}
+.resume__page3__production__name {
+  color: #fff;
+  text-align: center;
+}
+.resume__page3__production__desc {
+  color: #fff;
+  text-align: center;
+}
+.resume__page3__production__mask {
+  transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.3);
 }
 .resume__page4 {
   background: #F4D03F;

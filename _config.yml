@@ -244,35 +244,35 @@ Resume_page3: [
   {
     name: '车猫官网',
     desc: '技术：Html+css',
-    img: "",
+    img: "page3_chemao.png",
     link: "",
     type: 'PC'
   },
   {
     name: '车猫移动端网站',
     desc: '技术:Html+jQuery',
-    img: "",
+    img: "page3_m.chemao.png",
     link: "",
     type: '移动端'
   },
   {
     name: '棒米官网',
     desc: '技术',
-    img: "",
+    img: "page3_bongmi.png",
     link: "www.bongmi.com",
     type: 'PC'
   },
   {
     name: '棒米移动网站',
     desc: '技术',
-    img: "",
+    img: "page3_m.bongmi.png",
     link: "www.bongmi.com",
     type: '移动端'
   },
   {
     name: '个人博客',
     desc: '技术',
-    img: "",
+    img: "page3_blog.png",
     link: "mfwang.github.io",
     type: '响应式'
   },

@@ -56,9 +56,12 @@ className: resume
             <ul class="resume__page3__production">
                 {% for item in site.Resume_page3 %}
                     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="resume__page3__production__item">
-                            <p class="resume__page3__production__name">{{ item.name }}</p>
-                            <p class="resume__page3__production__desc">{{ item.desc }}</p>
+                        <div class="resume__page3__production__item" style="background: url(./img/resume/{{ item.img}}) no-repeat center / cover" data-img="{{ item.img }}">
+                            <div class="resume__page3__production__content">
+                                <p class="resume__page3__production__name">{{ item.name }}</p>
+                                <p class="resume__page3__production__desc">{{ item.desc }}</p>
+                            </div>
+                            <div class="resume__page3__production__mask"></div>
                         </div> 
                     </li>
                 {% endfor %}
