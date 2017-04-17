@@ -1,4 +1,4 @@
-.production_banner {
+.production__banner {
   height: 100vh;
   background: #000 url(../img/index_bg.jpg) no-repeat center;
   background-size: cover;
@@ -6,7 +6,7 @@
   position: relative;
   margin-bottom: 20px;
 }
-.production_banner__content {
+.production__banner__content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -14,11 +14,11 @@
   color: #fff;
   text-align: center;
 }
-.production_banner_title {
+.production__banner__title {
   font-size: 80px;
   margin-bottom: 30px;
 }
-.production_banner_desc {
+.production__banner__desc {
   font-size: 20px;
 }
 .production_item {

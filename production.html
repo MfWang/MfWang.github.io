@@ -23,9 +23,15 @@ className: production
                         <p class="production_item_name">{{ production.name }}</p>
                         <p class="production_item_date">{{ production.date }}</p>
                     </div>
+                    {% if production.resource %}
                     <a href="{{ site.github_template_link }}{{ production.link }}" target="_blank" class="production_item_link">
                         <img src="/img/production/{{ production.name }}.png" alt="" class="production_item_img">
                     </a>
+                    {% else %}
+                    <a href="javascript:void(0);" class="production_item_link">
+                        <img src="/img/production/{{ production.name }}.png" alt="" class="production_item_img">
+                    </a>
+                    {% endif %}
                     <p class="production_item_desc">{{ production.summary }}</p>
                     <div class="production_item_bottom">
                         <div class="production_item_tag">
@@ -33,7 +39,9 @@ className: production
                             <i class="iconfont icon_{{ icon }} production_item_tag_item"></i>
                             {% endfor %}
                         </div>
+                        {% if production.resource %}
                         <a href="{{ production.link }}" target="_blank" class="production_item_link_resource">TO Resource</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

@@ -170,42 +170,72 @@ Productions: [
     date: "2016.08",
     summary: "纯CSS绘制图形",
     tag: ['css'],
-    link: "https://github.com/MfWang/Production/blob/master/Graphical/graphical.html"
+    link: "https://github.com/MfWang/Production/blob/master/Graphical/graphical.html",
+    resource: true
   },
   {
     name: "Navigation",
     date: "2016.10",
-    summary: "Button样式集合",
+    summary: "Navigation样式集合",
     tag: ['css'],
-    link: "https://github.com/MfWang/Production/blob/master/Navigation/navigation.html"
+    link: "https://github.com/MfWang/Production/blob/master/Navigation/navigation.html",
+    resource: true
   },
   {
     name: "Loading",
     date: "2016.11",
     summary: "",
     tag: ['css'],
-    link: "https://github.com/MfWang/Production/blob/master/Loading/loading.html"
+    link: "https://github.com/MfWang/Production/blob/master/Loading/loading.html",
+    resource: true
   },
   {
     name: "PhoneMenu",
     date: "2017.03",
     summary: "",
     tag: ['css','respone'],
-    link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html"
+    link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html",
+    resource: true
   },
   {
     name: "FullScreenAsteroid",
     date: "2016.03",
     summary: "满屏的小行星乱撞",
     tag: ['css','respone'],
-    link: "https://github.com/MfWang/FullScreenAsteroid/blob/master/gaojidonghua-asteroids.html"
+    link: "https://github.com/MfWang/FullScreenAsteroid/blob/master/gaojidonghua-asteroids.html",
+    resource: true
   },
   {
     name: "EscapePlanet",
     date: "2016.03",
     summary: "躲避小行星",
     tag: ['css','respone'],
-    link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html"
+    link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html",
+    resource: true
+  },
+  {
+    name: "Timeline",
+    date: "2017.04.17",
+    summary: "",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Timeline/timeline.html",
+    resource: true
+  },
+  {
+    name: "Chemao",
+    date: "2015.06",
+    summary: "2015.06——2016.07，在杭州车猫网络科技有限公司任职。公司从事二手车检验与销售，公司官网包括各类二手车车源信息、各个活动页面、合作车上门店信息等。",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Timeline/timeline.html",
+    resource: false
+  },
+  {
+    name: "m.Chemao",
+    date: "2015.06",
+    summary: "2015.06——2016.07，在杭州车猫网络科技有限公司任职。公司从事二手车检验与销售，公司官网包括各类二手车车源信息、各个活动页面、合作车上门店信息等。",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Timeline/timeline.html",
+    resource: false
   }
 ]
 
